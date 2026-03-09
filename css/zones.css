@@ -1487,6 +1487,55 @@
     margin-bottom: 8px;
 }
 
+.profile-retry-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.btn-retry {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.btn-retry:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-retry:active {
+    transform: translateY(0);
+}
+
+.btn-retry .btn-icon {
+    font-size: 1.1rem;
+}
+
+body.dark-theme .btn-retry {
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+}
+
+body.dark-theme .btn-retry:hover {
+    background: var(--primary-light);
+    color: #0f172a;
+}
+
 /* ============================================
    SOURCE CARDS (Zone 1 right panel)
    ============================================ */

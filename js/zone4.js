@@ -399,9 +399,94 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p><strong>📝 Nhận xét:</strong> ${tendencyDesc}</p>
                     <p><strong>🎯 Đề xuất:</strong> ${overallScore >= 75 ? 'Bạn có nền tảng tốt. Duy trì thái độ giám sát.' : overallScore >= 50 ? 'Bạn đang hình thành thái độ tích cực. Hãy kiên quyết hơn.' : 'Hãy đọc lại phần Hồ sơ chương học, đặc biệt mục Trách nhiệm công dân.'}</p>
                 </div>
+                <div class="profile-retry-wrap">
+                    <button class="btn btn-retry" id="retryZone4">
+                        <span class="material-symbols-rounded btn-icon">replay</span> Thử lại từ đầu
+                    </button>
+                </div>
             </div>
         `;
         profileDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Bind retry button
+        const retryBtn = document.getElementById('retryZone4');
+        if (retryBtn) retryBtn.addEventListener('click', resetZone4);
+    }
+
+    // ==========================================
+    // RESET / RETRY ZONE 4
+    // ==========================================
+    function resetZone4() {
+        // Reset AppState
+        AppState.scenarioResults = [];
+        AppState.classifierScore = undefined;
+        AppState.spectrumScore = 0;
+        currentScenario = 0;
+        classifierDropCount = 0;
+        spectrumDropCount = 0;
+
+        // ---- Reset Game 1: Scenario carousel ----
+        if (counterEl) counterEl.textContent = `Câu 1 / ${scenarios.length}`;
+        if (progressFill) progressFill.style.width = '0%';
+        renderScenario(0);
+
+        // ---- Reset Game 2: Classifier ----
+        if (classifierContainer) {
+            classifierContainer.innerHTML = '';
+            shuffleArray([...classifierData]).forEach((item, idx) => {
+                const el = createElement('div', 'classify-item', item.text);
+                el.dataset.id = 'cls-' + idx;
+                el.dataset.correct = item.correct;
+                makeDraggable(el);
+                classifierContainer.appendChild(el);
+            });
+        }
+        // Clear drop zones for classifier
+        document.querySelectorAll('#z4mod2 .drop-zone').forEach(zone => {
+            zone.innerHTML = '';
+            makeDropZone(zone);
+        });
+        if (checkClassifierBtn) checkClassifierBtn.style.display = 'none';
+        if (classifierFeedback) {
+            classifierFeedback.className = 'classifier-feedback';
+            classifierFeedback.innerHTML = '';
+        }
+
+        // ---- Reset Game 3: Spectrum ----
+        if (spectrumItemsContainer) {
+            spectrumItemsContainer.innerHTML = '';
+            shuffleArray([...spectrumData]).forEach(item => {
+                const el = createElement('div', 'spectrum-item', item.text);
+                el.dataset.id = item.id;
+                el.dataset.correct = item.correct;
+                makeDraggable(el);
+                spectrumItemsContainer.appendChild(el);
+            });
+        }
+        // Clear spectrum drop zones
+        document.querySelectorAll('.spectrum-zone').forEach(zone => {
+            zone.innerHTML = '';
+            makeDropZone(zone);
+        });
+        if (checkSpectrumBtn) checkSpectrumBtn.style.display = 'none';
+        if (spectrumFeedback) {
+            spectrumFeedback.classList.remove('show');
+            spectrumFeedback.innerHTML = '';
+        }
+
+        // ---- Reset Profile ----
+        const profileDiv = document.getElementById('citizenProfile');
+        if (profileDiv) {
+            profileDiv.innerHTML = `
+                <div class="profile-placeholder">
+                    <p><span class="material-symbols-rounded inline-icon">lock</span> Hoàn thành tình huống thực tế và phân loại ở trên để xem hồ sơ công dân của bạn</p>
+                </div>
+            `;
+        }
+
+        // Scroll back to top of zone 4 game 1
+        const mod1 = document.getElementById('z4mod1');
+        if (mod1) setTimeout(() => mod1.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
     }
 });
 
