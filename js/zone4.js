@@ -132,6 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
             doneBtn.addEventListener('click', () => {
                 if (progressFill) progressFill.style.width = '100%';
                 if (counterEl) counterEl.textContent = `Hoàn thành ${scenarios.length} / ${scenarios.length}`;
+                // Auto scroll to game 2 (classifier)
+                const mod2 = document.getElementById('z4mod2');
+                if (mod2) {
+                    setTimeout(() => mod2.scrollIntoView({ behavior: 'smooth', block: 'start' }), 400);
+                }
                 checkAllComplete();
             });
         }
@@ -250,6 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     classifierFeedback.innerHTML = `<p><strong>📝 Kết quả:</strong> ${correct}/${classifierData.length} đúng. Nhầm: ${wrongItems.join(', ')}.</p><p>Có kiểm soát = lãnh đạo, không kiểm soát = buông lỏng.</p>`;
                 }
             }
+
+            // Auto scroll to game 3 (spectrum)
+            const mod3 = document.getElementById('z4mod3');
+            if (mod3) {
+                setTimeout(() => mod3.scrollIntoView({ behavior: 'smooth', block: 'start' }), 600);
+            }
+
             checkAllComplete();
         });
     }
@@ -320,7 +332,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAllComplete() {
         const scenarioDone = AppState.scenarioResults.length >= scenarios.length;
         const classifierDone = AppState.classifierScore !== undefined;
-        if (scenarioDone && classifierDone) generateCitizenProfile();
+        const spectrumDone = AppState.spectrumScore !== undefined;
+        if (scenarioDone && classifierDone && spectrumDone) generateCitizenProfile();
     }
 
     function generateCitizenProfile() {
