@@ -4,6 +4,23 @@
 
 /* ===== GLOBAL MOBILE TYPOGRAPHY ===== */
 @media (max-width: 768px) {
+    /* Fix tap highlight & text selection on all interactive elements — mobile only */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    button, a, [role="button"],
+    .scenario-option, .classify-item, .spectrum-item,
+    .nav-link, .preset-btn, .accordion-header,
+    .home-card, .textbook-thumb, .sidebar-link,
+    .btn, .btn-retry, .back-to-top, .hamburger,
+    .theme-toggle, .expand-btn, .info-btn,
+    .swipe-dot, .home-card-icon, label {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
     body {
         font-size: 15px;
         line-height: 1.75;
@@ -48,10 +65,11 @@
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
         flex-direction: column;
-        padding: 20px 16px;
+        padding: 16px 16px 32px;
         gap: 4px;
         z-index: 999;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-links.open { display: flex; }
@@ -60,6 +78,8 @@
         padding: 14px 18px;
         font-size: 0.95rem;
         border-radius: var(--radius-sm);
+        white-space: normal;
+        line-height: 1.4;
     }
 
     .nav-link.active {
@@ -907,6 +927,69 @@
     .compare-note {
         font-size: 0.82rem;
         padding: 10px 14px;
+    }
+}
+
+/* ===== SWIPE NAVIGATION HINT ===== */
+@media (max-width: 768px) {
+    /* Page dots at bottom of each section */
+    .swipe-page-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 20px 0 12px;
+    }
+
+    .swipe-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--border);
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .swipe-dot.active {
+        background: var(--primary);
+        width: 20px;
+        border-radius: 4px;
+    }
+
+    body.dark-theme .swipe-dot.active {
+        background: var(--primary-light);
+    }
+
+    /* First-visit swipe hint toast */
+    .swipe-hint-toast {
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+        background: rgba(26,54,93,0.92);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 24px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 9999;
+        white-space: nowrap;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
+
+    .swipe-hint-toast.show {
+        opacity: 1;
+    }
+
+    body.dark-theme .swipe-hint-toast {
+        background: rgba(99,179,237,0.92);
+        color: #0f172a;
     }
 }
 

@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close mobile menu
         document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('active');
+
+        // Update page dots (mobile)
+        document.querySelectorAll('.swipe-dot').forEach(dot => {
+            dot.classList.toggle('active', dot.dataset.section === sectionId);
+        });
 
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -210,6 +216,18 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // --- SWIPE HINT TOAST (show once on mobile) ---
+    if (window.innerWidth <= 768 && !sessionStorage.getItem('swipeHintShown')) {
+        const toast = document.getElementById('swipeHintToast');
+        if (toast) {
+            setTimeout(() => {
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3500);
+            }, 1200);
+            sessionStorage.setItem('swipeHintShown', '1');
+        }
+    }
 });
 
 // Textbook lightbox (global scope)
@@ -228,3 +246,61 @@ function closeTextbook() {
     const lightbox = document.getElementById('textbookLightbox');
     if (lightbox) lightbox.classList.remove('show');
 }
+
+// ============================================
+//  SWIPE TO NAVIGATE (mobile only)
+// ============================================
+(function initSwipeNav() {
+    const SECTIONS = ['home', 'zone1', 'zone2', 'zone3', 'zone4', 'ai'];
+    const SWIPE_THRESHOLD = 60;   // px minimum horizontal swipe distance
+    const SWIPE_MAX_VERT = 80;    // px max vertical drift allowed
+    const VELOCITY_MIN = 0.3;     // px/ms — ignore very slow lazy drags
+
+    let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+
+    document.addEventListener('touchstart', (e) => {
+        // Only activate on mobile widths
+        if (window.innerWidth > 768) return;
+        const t = e.touches[0];
+        touchStartX = t.clientX;
+        touchStartY = t.clientY;
+        touchStartTime = Date.now();
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+        if (window.innerWidth > 768) return;
+
+        // Ignore if a drag-and-drop game element is being used
+        if (e.target.closest('.spectrum-zone, .drop-zone, .classify-item, .spectrum-item')) return;
+        // Ignore if inside the nav menu
+        if (e.target.closest('#navLinks')) return;
+
+        const t = e.changedTouches[0];
+        const dx = t.clientX - touchStartX;
+        const dy = t.clientY - touchStartY;
+        const dt = Date.now() - touchStartTime;
+        const velocity = Math.abs(dx) / dt;
+
+        if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+        if (Math.abs(dy) > SWIPE_MAX_VERT) return;
+        if (velocity < VELOCITY_MIN) return;
+
+        const current = AppState.currentSection || 'home';
+        const idx = SECTIONS.indexOf(current);
+        if (idx === -1) return;
+
+        let nextIdx;
+        if (dx < 0) {
+            // Swipe left → next page
+            nextIdx = Math.min(idx + 1, SECTIONS.length - 1);
+        } else {
+            // Swipe right → previous page
+            nextIdx = Math.max(idx - 1, 0);
+        }
+
+        if (nextIdx !== idx) {
+            location.hash = '#' + SECTIONS[nextIdx];
+        }
+    }, { passive: true });
+})();
+

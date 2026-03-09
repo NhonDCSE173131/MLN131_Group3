@@ -929,6 +929,11 @@ body.dark-theme .footer {
     }
 }
 
+/* Hide mobile-only elements on desktop */
+.swipe-page-dots,
+.swipe-hint-toast {
+    display: none;
+}
 
 /* ============================================
    BACK TO TOP BUTTON
@@ -968,5 +973,11 @@ body.dark-theme .footer {
 body.dark-theme .back-to-top {
     background: var(--primary-light);
     color: #0f172a;
+}
+
+/* Mobile-only elements — hidden on desktop */
+.swipe-page-dots,
+.swipe-hint-toast {
+    display: none;
 }
 
