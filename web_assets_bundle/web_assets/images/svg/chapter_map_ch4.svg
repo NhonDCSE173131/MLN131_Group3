@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+
+<rect width="1400" height="900" fill="#F6F2EA"/>
+<rect x="110" y="110" width="1180" height="680" rx="32" fill="white" stroke="#D8CFC1"/>
+<text x="700" y="170" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#7A1F1F">BAN DO CHUONG HOC</text>
+<text x="700" y="220" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Tu dan chu XHCN den Nha nuoc phap quyen, phong chong tham nhung va trach nhiem cong dan</text>
+<rect x="560" y="300" width="280" height="110" rx="20" fill="#FFF9F3" stroke="#C6A96A" stroke-width="3"/>
+<text x="700" y="350" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#121212">DAN CHU</text>
+<text x="700" y="385" text-anchor="middle" font-family="Arial" font-size="24" fill="#121212">XA HOI CHU NGHIA</text>
+<rect x="220" y="520" width="290" height="120" rx="20" fill="white" stroke="#7A1F1F" stroke-width="3"/>
+<text x="365" y="572" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#7A1F1F">NHA NUOC PHAP</text>
+<text x="365" y="607" text-anchor="middle" font-family="Arial" font-size="24" fill="#7A1F1F">QUYEN XHCN</text>
+<rect x="555" y="520" width="290" height="120" rx="20" fill="white" stroke="#7A1F1F" stroke-width="3"/>
+<text x="700" y="565" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#7A1F1F">PHONG CHONG</text>
+<text x="700" y="600" text-anchor="middle" font-family="Arial" font-size="24" fill="#7A1F1F">THAM NHUNG</text>
+<rect x="890" y="520" width="290" height="120" rx="20" fill="white" stroke="#7A1F1F" stroke-width="3"/>
+<text x="1035" y="572" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#7A1F1F">TRACH NHIEM</text>
+<text x="1035" y="607" text-anchor="middle" font-family="Arial" font-size="24" fill="#7A1F1F">CONG DAN</text>
+<path d="M700 410 L365 520" stroke="#C6A96A" stroke-width="4"/>
+<path d="M700 410 L700 520" stroke="#C6A96A" stroke-width="4"/>
+<path d="M700 410 L1035 520" stroke="#C6A96A" stroke-width="4"/>
+
+</svg>

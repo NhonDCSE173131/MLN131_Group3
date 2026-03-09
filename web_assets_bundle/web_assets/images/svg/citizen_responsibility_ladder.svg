@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" fill="none">
+
+<rect width="1600" height="700" fill="#F6F2EA"/>
+<text x="800" y="90" text-anchor="middle" font-family="Arial" font-size="40" font-weight="700" fill="#7A1F1F">IM LANG HAY HANH DONG?</text>
+<line x1="180" y1="400" x2="1420" y2="400" stroke="#C6A96A" stroke-width="8" stroke-linecap="round"/>
+<circle cx="220" cy="400" r="18" fill="white" stroke="#7A1F1F" stroke-width="4"/><text x="220" y="340" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">NE TRANH</text><text x="220" y="468" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Thay nhung bo qua</text>
+<circle cx="500" cy="400" r="18" fill="white" stroke="#7A1F1F" stroke-width="4"/><text x="500" y="340" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">THOA HIEP</text><text x="500" y="468" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Biet sai nhung chap nhan</text>
+<circle cx="800" cy="400" r="18" fill="white" stroke="#7A1F1F" stroke-width="4"/><text x="800" y="340" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">NHAN DIEN</text><text x="800" y="468" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Khong coi sai trai la binh thuong</text>
+<circle cx="1100" cy="400" r="18" fill="white" stroke="#7A1F1F" stroke-width="4"/><text x="1100" y="340" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">PHAN ANH</text><text x="1100" y="468" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Len tieng hoac kien nghi</text>
+<circle cx="1380" cy="400" r="18" fill="white" stroke="#7A1F1F" stroke-width="4"/><text x="1380" y="340" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">GIAM SAT</text><text x="1380" y="468" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Hanh dong dung phap ly</text>
+<text x="800" y="590" text-anchor="middle" font-family="Arial" font-size="24" fill="#121212">Trach nhiem cong dan khong bat dau o hanh dong lon, ma bat dau o cho khong dung duong cai sai.</text>
+
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+
+<rect width="1600" height="900" fill="#F6F2EA"/>
+<text x="800" y="90" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#7A1F1F">LANH DAO HAY BUONG LONG?</text>
+<rect x="110" y="170" width="620" height="620" rx="28" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<rect x="870" y="170" width="620" height="620" rx="28" fill="white" stroke="#7A1F1F" stroke-width="3"/>
+<text x="420" y="235" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#121212">DANG LANH DAO</text>
+<text x="1180" y="235" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#7A1F1F">DANG BUONG LONG</text>
+<text x="190" y="320" font-family="Arial" font-size="22" fill="#121212">- Quyen luc co kiem soat</text><text x="190" y="415" font-family="Arial" font-size="22" fill="#121212">- Cong khai, minh bach</text><text x="190" y="510" font-family="Arial" font-size="22" fill="#121212">- Giai trinh, giam sat</text><text x="190" y="605" font-family="Arial" font-size="22" fill="#121212">- Xu ly sai pham nghiem minh</text><text x="190" y="700" font-family="Arial" font-size="22" fill="#121212">- Tu chinh don to chuc</text><text x="950" y="320" font-family="Arial" font-size="22" fill="#7A1F1F">- Quyen luc khong duoc rang buoc</text><text x="950" y="415" font-family="Arial" font-size="22" fill="#7A1F1F">- Khep kin, mo am</text><text x="950" y="510" font-family="Arial" font-size="22" fill="#7A1F1F">- Ne tranh trach nhiem</text><text x="950" y="605" font-family="Arial" font-size="22" fill="#7A1F1F">- Dung tung hoac ne nang</text><text x="950" y="700" font-family="Arial" font-size="22" fill="#7A1F1F">- Suy thoai khong duoc ngan chan</text>
+<text x="800" y="845" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Ranh gioi khong nam o danh nghia, ma nam o co che kiem soat quyen luc.</text>
+
+</svg>

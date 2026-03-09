@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+
+<rect width="1600" height="900" fill="#F6F2EA"/>
+<text x="800" y="105" text-anchor="middle" font-family="Arial" font-size="52" font-weight="700" fill="#121212">BAN DO QUYEN LUC, LIEM CHINH VA CONG DAN</text>
+<text x="800" y="160" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Kham pha Nha nuoc phap quyen XHCN, phong chong tham nhung va trach nhiem cong dan</text>
+<circle cx="800" cy="450" r="170" fill="white" stroke="#7A1F1F" stroke-width="4"/>
+<text x="800" y="430" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#7A1F1F">QUYEN LUC</text>
+<text x="800" y="485" text-anchor="middle" font-family="Arial" font-size="30" fill="#121212">LIEM CHINH / CONG DAN</text>
+<circle cx="350" cy="220" r="115" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="350" y="212" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#121212">NHA NUOC</text>
+<text x="350" y="248" text-anchor="middle" font-family="Arial" font-size="22" fill="#121212">PHAP QUYEN</text>
+<circle cx="1250" cy="220" r="115" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="1250" y="212" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">PHONG CHONG</text>
+<text x="1250" y="248" text-anchor="middle" font-family="Arial" font-size="24" fill="#121212">THAM NHUNG</text>
+<circle cx="350" cy="680" r="115" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="350" y="672" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">KIEM SOAT</text>
+<text x="350" y="708" text-anchor="middle" font-family="Arial" font-size="24" fill="#121212">QUYEN LUC</text>
+<circle cx="1250" cy="680" r="115" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="1250" y="670" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">TRACH NHIEM</text>
+<text x="1250" y="706" text-anchor="middle" font-family="Arial" font-size="24" fill="#121212">CONG DAN</text>
+<path d="M460 260 C560 320 620 360 645 380" stroke="#7A1F1F" stroke-width="4" stroke-linecap="round"/>
+<path d="M1140 260 C1040 320 980 360 955 380" stroke="#7A1F1F" stroke-width="4" stroke-linecap="round"/>
+<path d="M460 640 C560 585 620 548 645 520" stroke="#7A1F1F" stroke-width="4" stroke-linecap="round"/>
+<path d="M1140 640 C1040 585 980 548 955 520" stroke="#7A1F1F" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

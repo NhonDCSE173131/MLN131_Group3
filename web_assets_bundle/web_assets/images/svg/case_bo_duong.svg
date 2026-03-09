@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+
+<rect width="1200" height="700" fill="#F6F2EA"/>
+<rect x="120" y="100" width="960" height="500" rx="28" fill="white" stroke="#D8CFC1"/>
+<rect x="170" y="150" width="140" height="180" rx="20" fill="#FFF9F3" stroke="#C6A96A" stroke-width="3"/>
+<text x="240" y="238" text-anchor="middle" font-family="Arial" font-size="54" font-weight="700" fill="#7A1F1F">CASE</text>
+<text x="240" y="292" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#7A1F1F">FILE</text>
+<text x="610" y="220" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#121212">Boi duong de ho so nhanh hon</text>
+<text x="610" y="315" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Dau hieu nhung nhieu va vu loi trong hoat dong cong vu.</text>
+<text x="610" y="420" text-anchor="middle" font-family="Arial" font-size="22" fill="#121212">Nhan dien dau hieu - Phan tich rui ro - Goi y hanh dong dung phap ly</text>
+<text x="600" y="650" text-anchor="middle" font-family="Arial" font-size="22" fill="#8B8B8B">Dung cho Khu 4 - Cong dan va tinh huong</text>
+
+</svg>

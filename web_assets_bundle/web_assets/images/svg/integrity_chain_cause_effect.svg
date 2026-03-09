@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" fill="none">
+
+<rect width="1600" height="700" fill="#F6F2EA"/>
+<text x="800" y="80" text-anchor="middle" font-family="Arial" font-size="40" font-weight="700" fill="#7A1F1F">CHUOI NGUYEN NHAN - HE QUA</text>
+<rect x="70" y="250" width="210" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="175" y="315" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">QUYEN LUC</text>
+<rect x="340" y="250" width="210" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="445" y="305" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">THIEU KIEM SOAT</text>
+<rect x="610" y="250" width="210" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="715" y="315" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">THA HOA</text>
+<rect x="880" y="250" width="210" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="985" y="305" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">LOI ICH NHOM / VU LOI</text>
+<rect x="1150" y="250" width="210" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="1255" y="305" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">THAM NHUNG</text>
+<rect x="1370" y="250" width="160" height="110" rx="18" fill="white" stroke="#7A1F1F"/>
+<text x="1450" y="305" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#121212">GIAM NIEM TIN</text>
+<path d="M280 305 L340 305" stroke="#C6A96A" stroke-width="6" stroke-linecap="round"/>
+<path d="M550 305 L610 305" stroke="#C6A96A" stroke-width="6" stroke-linecap="round"/>
+<path d="M820 305 L880 305" stroke="#C6A96A" stroke-width="6" stroke-linecap="round"/>
+<path d="M1090 305 L1150 305" stroke="#C6A96A" stroke-width="6" stroke-linecap="round"/>
+<path d="M1360 305 L1370 305" stroke="#C6A96A" stroke-width="6" stroke-linecap="round"/>
+<text x="800" y="510" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#121212">Muon chong tham nhung, phai kiem soat quyen luc va ngan su tha hoa tu ben trong.</text>
+
+</svg>

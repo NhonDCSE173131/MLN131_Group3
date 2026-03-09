@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" fill="none">
+
+<rect width="1400" height="700" fill="#F6F2EA"/>
+<text x="700" y="85" text-anchor="middle" font-family="Arial" font-size="40" font-weight="700" fill="#7A1F1F">AI USAGE AND NGUON</text>
+<rect x="90" y="150" width="380" height="420" rx="22" fill="white" stroke="#D8CFC1"/>
+<rect x="510" y="150" width="380" height="420" rx="22" fill="white" stroke="#D8CFC1"/>
+<rect x="930" y="150" width="380" height="420" rx="22" fill="white" stroke="#D8CFC1"/>
+<text x="280" y="220" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#121212">AI Usage</text>
+<text x="280" y="280" text-anchor="middle" font-family="Arial" font-size="20" fill="#8B8B8B">Cong cu - Muc dich - Prompt - Output - Phan nhom sua</text>
+<text x="700" y="220" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#121212">Liem chinh</text>
+<text x="700" y="280" text-anchor="middle" font-family="Arial" font-size="20" fill="#8B8B8B">Khong de AI lam thay hoan toan / Tu chiu trach nhiem noi dung</text>
+<text x="1120" y="220" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#121212">Nguon</text>
+<text x="1120" y="280" text-anchor="middle" font-family="Arial" font-size="20" fill="#8B8B8B">Giao trinh - NXB CTQG - Ban Noi chinh - Bo Tu phap</text>
+
+</svg>

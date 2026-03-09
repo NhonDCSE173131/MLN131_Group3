@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+
+<rect width="1400" height="900" fill="#F6F2EA"/>
+<text x="700" y="90" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#7A1F1F">BON TRU QUAN DIEM</text>
+<text x="700" y="135" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Theo truc ly luan ve phong, chong tham nhung cua Tong Bi thu Nguyen Phu Trong</text>
+<circle cx="700" cy="450" r="110" fill="white" stroke="#7A1F1F" stroke-width="4"/>
+<text x="700" y="435" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#7A1F1F">PHONG CHONG</text>
+<text x="700" y="472" text-anchor="middle" font-family="Arial" font-size="28" fill="#7A1F1F">THAM NHUNG</text>
+<rect x="160" y="170" width="340" height="170" rx="24" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="330" y="225" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">XAY DUNG, CHINH DON DANG</text>
+<text x="330" y="305" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Lam trong sach bo may, giu niem tin cua nhan dan</text>
+<rect x="900" y="170" width="340" height="170" rx="24" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="1070" y="230" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">KIEM SOAT QUYEN LUC</text>
+<text x="1070" y="310" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Quyen luc phai gan voi minh bach va giai trinh</text>
+<rect x="160" y="560" width="340" height="170" rx="24" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="330" y="615" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">KHONG CO VUNG CAM</text>
+<text x="330" y="695" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Xu ly nghiem, khong ne tranh ngoai le</text>
+<rect x="900" y="560" width="340" height="170" rx="24" fill="white" stroke="#C6A96A" stroke-width="3"/>
+<text x="1070" y="612" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#121212">CHONG SUY THOAI</text>
+<text x="1070" y="695" text-anchor="middle" font-family="Arial" font-size="18" fill="#8B8B8B">Nhan dien tha hoa, ngan ngua tu ben trong</text>
+
+</svg>

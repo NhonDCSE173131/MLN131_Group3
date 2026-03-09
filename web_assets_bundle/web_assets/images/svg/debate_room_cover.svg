@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+
+<rect width="1600" height="900" fill="#F6F2EA"/>
+<rect x="80" y="120" width="1440" height="660" rx="34" fill="white" stroke="#D8CFC1"/>
+<text x="800" y="230" text-anchor="middle" font-family="Arial" font-size="28" fill="#8B8B8B">CHU DE TRANH LUAN</text>
+<text x="800" y="330" text-anchor="middle" font-family="Arial" font-size="58" font-weight="700" fill="#7A1F1F">LIEU CO PHAI</text>
+<text x="800" y="410" text-anchor="middle" font-family="Arial" font-size="58" font-weight="700" fill="#7A1F1F">MOT DANG DE RA THAM NHUNG?</text>
+<text x="800" y="510" text-anchor="middle" font-family="Arial" font-size="28" fill="#121212">Mot ho so tranh luan hoc thuat ve quyen luc, kiem soat quyen luc</text>
+<text x="800" y="550" text-anchor="middle" font-family="Arial" font-size="28" fill="#121212">va hien tuong tha hoa trong mot bo phan can bo, dang vien</text>
+<text x="800" y="680" text-anchor="middle" font-family="Arial" font-size="24" fill="#8B8B8B">Khong tra loi bang cam tinh. Tra loi bang ly luan, tieu chi va logic the che.</text>
+
+</svg>
