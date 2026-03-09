@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         status.classList.remove('danger', 'safe');
 
         if (avg >= 70) {
-            statusIcon.textContent = '✅';
+            statusIcon.innerHTML = '<span class="material-symbols-rounded">verified</span>';
             statusText.textContent = 'Hệ thống kiểm soát tốt — quyền lực được giám sát chặt chẽ';
             status.classList.add('safe');
         } else if (avg >= 40) {
-            statusIcon.textContent = '⚖️';
+            statusIcon.innerHTML = '<span class="material-symbols-rounded">balance</span>';
             statusText.textContent = 'Hệ thống đang ở trạng thái cân bằng — cần duy trì và cải thiện';
         } else {
-            statusIcon.textContent = '🚨';
+            statusIcon.innerHTML = '<span class="material-symbols-rounded">emergency</span>';
             statusText.textContent = 'CẢNH BÁO: Kiểm soát yếu — nguy cơ tha hóa quyền lực cao!';
             status.classList.add('danger');
         }

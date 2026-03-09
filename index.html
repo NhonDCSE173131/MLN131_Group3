@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/zones.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 </head>
 <body>
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="#home" class="nav-brand" id="navBrandHome">
-            <span class="nav-logo">⚖️</span>
+            <span class="nav-logo"><span class="material-symbols-rounded">balance</span></span>
             <span class="nav-title">MLN131 — Nhóm 3</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
+            <div class="nav-indicator" id="navIndicator"></div>
             <li><a href="#home" class="nav-link active" data-section="home">Bản đồ quyền lực, liêm chính và công dân</a></li>
             <li><a href="#zone1" class="nav-link" data-section="zone1">Hồ sơ chương học</a></li>
             <li><a href="#zone2" class="nav-link" data-section="zone2">Thư viện trực quan</a></li>
@@ -28,7 +31,7 @@
             <li><a href="#ai" class="nav-link" data-section="ai">AI & Nguồn</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" title="Chuyển đổi sáng/tối">
-            <span class="theme-icon">🌙</span>
+            <span class="theme-icon material-symbols-rounded">dark_mode</span>
         </button>
     </nav>
 
@@ -44,8 +47,8 @@
                 Người xem có thể tiếp cận kiến thức qua sơ đồ, hồ sơ khái niệm, chuỗi nguyên nhân – hệ quả, tình huống công dân, và một hồ sơ tranh luận học thuật về câu hỏi:<br>
                 <strong>"Liệu có phải một Đảng đẻ ra tham nhũng?"</strong></p>
                 <div class="hero-buttons">
-                    <a href="#zone1" class="btn btn-primary">🧭 Khám phá nội dung chương</a>
-                    <a href="#zone3" class="btn btn-secondary">💬 Mở chủ đề tranh luận</a>
+                    <a href="#zone1" class="btn btn-primary"><span class="material-symbols-rounded btn-icon">explore</span> Khám phá nội dung chương</a>
+                    <a href="#zone3" class="btn btn-secondary"><span class="material-symbols-rounded btn-icon">forum</span> Mở chủ đề tranh luận</a>
                 </div>
             </div>
             <!-- Circle Diagram -->
@@ -54,30 +57,30 @@
                     <span>Nội dung<br>Chương học</span>
                 </div>
                 <div class="circle-node node-1" data-tooltip="Nhà nước pháp quyền XHCN">
-                    <div class="node-icon">🏛️</div>
+                    <div class="node-icon"><span class="material-symbols-rounded">account_balance</span></div>
                     <div class="node-label">Nhà nước<br>pháp quyền</div>
                 </div>
                 <div class="circle-node node-2" data-tooltip="Phòng chống tham nhũng">
-                    <div class="node-icon">🛡️</div>
+                    <div class="node-icon"><span class="material-symbols-rounded">shield</span></div>
                     <div class="node-label">Phòng chống<br>tham nhũng</div>
                 </div>
                 <div class="circle-node node-3" data-tooltip="Kiểm soát quyền lực">
-                    <div class="node-icon">⚖️</div>
+                    <div class="node-icon"><span class="material-symbols-rounded">balance</span></div>
                     <div class="node-label">Kiểm soát<br>quyền lực</div>
                 </div>
                 <div class="circle-node node-4" data-tooltip="Trách nhiệm công dân">
-                    <div class="node-icon">👤</div>
+                    <div class="node-icon"><span class="material-symbols-rounded">person</span></div>
                     <div class="node-label">Trách nhiệm<br>công dân</div>
                 </div>
-                <svg class="circle-lines" viewBox="0 0 400 400">
-                    <line x1="200" y1="200" x2="200" y2="50" class="diagram-line"/>
-                    <line x1="200" y1="200" x2="350" y2="200" class="diagram-line"/>
-                    <line x1="200" y1="200" x2="200" y2="350" class="diagram-line"/>
-                    <line x1="200" y1="200" x2="50" y2="200" class="diagram-line"/>
+                <svg class="circle-lines" viewBox="0 0 460 460">
+                    <line x1="230" y1="230" x2="230" y2="70" class="diagram-line"/>
+                    <line x1="230" y1="230" x2="385" y2="230" class="diagram-line"/>
+                    <line x1="230" y1="230" x2="230" y2="390" class="diagram-line"/>
+                    <line x1="230" y1="230" x2="75" y2="230" class="diagram-line"/>
                 </svg>
             </div>
             <div class="hero-intro fade-in-up delay-3">
-                <p>💡 Web này được xây dựng từ nội dung <strong>Chương 4</strong> và vận dụng vào một câu hỏi tranh luận học thuật: <em>"Liệu có phải một Đảng đẻ ra tham nhũng?"</em></p>
+                <p><span class="material-symbols-rounded inline-icon">lightbulb</span> Web này được xây dựng từ nội dung <strong>Chương 4</strong> và vận dụng vào một câu hỏi tranh luận học thuật: <em>"Liệu có phải một Đảng đẻ ra tham nhũng?"</em></p>
             </div>
         </div>
 
@@ -86,22 +89,22 @@
             <h3 class="home-cards-title">Web này gồm 4 khu nội dung chính</h3>
             <div class="home-cards-grid">
                 <div class="home-card" onclick="location.hash='#zone1'">
-                    <div class="home-card-icon">📚</div>
+                    <div class="home-card-icon"><span class="material-symbols-rounded">menu_book</span></div>
                     <h4>Hồ sơ chương học</h4>
                     <p>Tổ chức lại nội dung chương thành bản đồ kiến thức rõ ràng, dễ hiểu.</p>
                 </div>
                 <div class="home-card" onclick="location.hash='#zone2'">
-                    <div class="home-card-icon">🔬</div>
+                    <div class="home-card-icon"><span class="material-symbols-rounded">science</span></div>
                     <h4>Thư viện trực quan</h4>
                     <p>Biến lý thuyết thành sơ đồ, timeline, chuỗi nguyên nhân – hệ quả và hồ sơ khái niệm.</p>
                 </div>
                 <div class="home-card" onclick="location.hash='#zone3'">
-                    <div class="home-card-icon">💬</div>
+                    <div class="home-card-icon"><span class="material-symbols-rounded">forum</span></div>
                     <h4>Chủ đề tranh luận</h4>
                     <p>Vận dụng lý thuyết để bàn luận câu hỏi: "Liệu có phải một Đảng đẻ ra tham nhũng?"</p>
                 </div>
                 <div class="home-card" onclick="location.hash='#zone4'">
-                    <div class="home-card-icon">👤</div>
+                    <div class="home-card-icon"><span class="material-symbols-rounded">person_check</span></div>
                     <h4>Công dân và tình huống</h4>
                     <p>Cụ thể hóa trách nhiệm công dân bằng những tình huống gần với đời sống.</p>
                 </div>
@@ -117,7 +120,7 @@
     <!-- ==================== ZONE 1 ==================== -->
     <section id="zone1" class="section">
         <div class="zone-header">
-            <span class="zone-badge">📚</span>
+            <span class="zone-badge"><span class="material-symbols-rounded">menu_book</span></span>
             <h2>Hồ sơ chương học</h2>
             <p class="zone-subtitle"><strong>Từ Nhà nước pháp quyền xã hội chủ nghĩa đến phòng, chống tham nhũng và trách nhiệm công dân</strong></p>
             <p class="zone-desc">Phần này giúp người xem thấy rõ nội dung học phần không tách rời nhau. Phòng, chống tham nhũng không chỉ là xử lý sai phạm, mà còn gắn với xây dựng Nhà nước pháp quyền, bảo vệ chế độ và phát huy vai trò của nhân dân, công dân trong đời sống chính trị – pháp lý.</p>
@@ -278,7 +281,7 @@
     <!-- ==================== ZONE 2 ==================== -->
     <section id="zone2" class="section">
         <div class="zone-header">
-            <span class="zone-badge">🔬</span>
+            <span class="zone-badge"><span class="material-symbols-rounded">science</span></span>
             <h2>Thư viện trực quan</h2>
             <p class="zone-subtitle"><strong>Nhìn lý thuyết bằng sơ đồ, chuỗi quan hệ và hồ sơ khái niệm</strong></p>
             <p class="zone-desc">Phần này không lặp lại giáo trình theo dạng chữ dài. Thay vào đó, nội dung được chuyển thành sơ đồ và tài liệu trực quan để người xem hiểu nhanh hơn mối liên hệ giữa quyền lực, pháp luật, tham nhũng và trách nhiệm công dân.</p>
@@ -286,7 +289,7 @@
 
         <!-- Block 2 — Chuỗi nguyên nhân – hệ quả -->
         <div class="z2-module" id="z2modChain">
-            <h3 class="z2-module-title">🔗 Chuỗi nguyên nhân – hệ quả</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">link</span> Chuỗi nguyên nhân – hệ quả</h3>
             <div class="chain-container">
                 <h4 class="chain-title">1. Khi quyền lực thiếu kiểm soát</h4>
                 <div class="chain-flow chain-negative">
@@ -327,7 +330,7 @@
 
         <!-- Module 2.1 -->
         <div class="z2-module" id="z2mod1">
-            <h3 class="z2-module-title">🔬 Mô phỏng Kiểm soát Quyền lực</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">labs</span> Mô phỏng Kiểm soát Quyền lực</h3>
             <div class="sim-layout">
                 <div class="sim-controls">
                     <div class="slider-group">
@@ -356,9 +359,9 @@
                         <span class="slider-val">50</span>
                     </div>
                     <div class="sim-presets">
-                        <button class="preset-btn" data-preset="strong">💪 Kiểm soát mạnh</button>
-                        <button class="preset-btn" data-preset="weak">😰 Buông lỏng</button>
-                        <button class="preset-btn" data-preset="balanced">⚖️ Cân bằng</button>
+                        <button class="preset-btn" data-preset="strong"><span class="material-symbols-rounded btn-icon">verified_user</span> Kiểm soát mạnh</button>
+                        <button class="preset-btn" data-preset="weak"><span class="material-symbols-rounded btn-icon">warning</span> Buông lỏng</button>
+                        <button class="preset-btn" data-preset="balanced"><span class="material-symbols-rounded btn-icon">balance</span> Cân bằng</button>
                     </div>
                 </div>
                 <div class="sim-results">
@@ -383,14 +386,14 @@
                         <div class="meter-value">50%</div>
                     </div>
                     <div class="sim-status" id="simStatus">
-                        <span class="status-icon">⚖️</span>
+                        <span class="status-icon"><span class="material-symbols-rounded">balance</span></span>
                         <span class="status-text">Hệ thống đang ở trạng thái cân bằng</span>
                     </div>
                 </div>
             </div>
-            <button class="info-btn" id="simInfoBtn">ℹ️ Mô phỏng này tính như thế nào?</button>
+            <button class="info-btn" id="simInfoBtn"><span class="material-symbols-rounded btn-icon">info</span> Mô phỏng này tính như thế nào?</button>
             <div class="info-popup" id="simInfoPopup">
-                <p>⚠️ Đây là <strong>mô phỏng khái niệm</strong> phục vụ học tập, không phải mô hình dự báo thực tế.</p>
+                <p><span class="material-symbols-rounded inline-icon" style="color:var(--accent)">warning</span> Đây là <strong>mô phỏng khái niệm</strong> phục vụ học tập, không phải mô hình dự báo thực tế.</p>
                 <p>Các biến được lấy từ logic: kiểm soát quyền lực, công khai minh bạch, giải trình, giám sát.</p>
                 <button class="close-popup">Đóng</button>
             </div>
@@ -398,7 +401,7 @@
 
         <!-- Bảng so sánh Lãnh đạo vs Buông lỏng -->
         <div class="z2-module" id="z2mod2">
-            <h3 class="z2-module-title">📋 Đảng lãnh đạo vs Đảng buông lỏng</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">compare_arrows</span> Đảng lãnh đạo vs Đảng buông lỏng</h3>
             <div class="compare-table-wrap">
                 <table class="compare-table">
                     <thead>
@@ -422,35 +425,35 @@
 
         <!-- Module 2.3 -->
         <div class="z2-module" id="z2mod3">
-            <h3 class="z2-module-title">📁 Tủ hồ sơ "Hệ quả xã hội"</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">folder_open</span> Tủ hồ sơ "Hệ quả xã hội"</h3>
             <div class="evidence-wall">
                 <div class="evidence-card" data-case="suythoai">
-                    <div class="ev-icon">📉</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">trending_down</span></div>
                     <h4>Suy thoái</h4>
                     <p class="ev-preview">Suy thoái tư tưởng chính trị, đạo đức, lối sống...</p>
                 </div>
                 <div class="evidence-card" data-case="thahoa">
-                    <div class="ev-icon">⚠️</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">gpp_maybe</span></div>
                     <h4>Tha hóa quyền lực</h4>
                     <p class="ev-preview">Biến quyền lực công thành quyền lực tư...</p>
                 </div>
                 <div class="evidence-card" data-case="vuloi">
-                    <div class="ev-icon">💰</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">payments</span></div>
                     <h4>Vụ lợi</h4>
                     <p class="ev-preview">Lợi dụng chức vụ, quyền hạn để tư lợi...</p>
                 </div>
                 <div class="evidence-card" data-case="thamnhung">
-                    <div class="ev-icon">🕳️</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">report</span></div>
                     <h4>Tham nhũng</h4>
                     <p class="ev-preview">Hành vi lạm dụng quyền lực được giao...</p>
                 </div>
                 <div class="evidence-card" data-case="niemtin">
-                    <div class="ev-icon">💔</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">heart_broken</span></div>
                     <h4>Suy giảm niềm tin</h4>
                     <p class="ev-preview">Nhân dân mất niềm tin vào Đảng và Nhà nước...</p>
                 </div>
                 <div class="evidence-card" data-case="pqtn">
-                    <div class="ev-icon">🏚️</div>
+                    <div class="ev-icon"><span class="material-symbols-rounded">domain_disabled</span></div>
                     <h4>Tổn hại NN Pháp quyền</h4>
                     <p class="ev-preview">Nền tảng pháp quyền bị xói mòn...</p>
                 </div>
@@ -466,30 +469,30 @@
 
         <!-- Block 4 — Tủ khái niệm -->
         <div class="z2-module" id="z2mod4">
-            <h3 class="z2-module-title">📂 Hồ sơ khái niệm</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">description</span> Hồ sơ khái niệm</h3>
             <div class="concept-grid">
                 <div class="concept-file-card">
-                    <h4>🔍 Công khai, minh bạch</h4>
+                    <h4><span class="material-symbols-rounded card-icon">visibility</span> Công khai, minh bạch</h4>
                     <p>Là điều kiện để nhân dân và xã hội biết được thông tin cần thiết, từ đó có cơ sở giám sát hoạt động công quyền.</p>
                 </div>
                 <div class="concept-file-card">
-                    <h4>📋 Trách nhiệm giải trình</h4>
+                    <h4><span class="material-symbols-rounded card-icon">assignment</span> Trách nhiệm giải trình</h4>
                     <p>Là yêu cầu buộc người có thẩm quyền phải giải thích, chịu trách nhiệm và không thể né tránh trước quyết định hoặc hành vi công vụ của mình.</p>
                 </div>
                 <div class="concept-file-card">
-                    <h4>🔒 Kiểm soát quyền lực</h4>
+                    <h4><span class="material-symbols-rounded card-icon">lock</span> Kiểm soát quyền lực</h4>
                     <p>Là cơ chế ngăn quyền lực bị lạm dụng, bị biến thành công cụ phục vụ lợi ích cá nhân hoặc lợi ích nhóm.</p>
                 </div>
                 <div class="concept-file-card">
-                    <h4>⚠️ Xung đột lợi ích</h4>
+                    <h4><span class="material-symbols-rounded card-icon">error</span> Xung đột lợi ích</h4>
                     <p>Là tình huống trong đó lợi ích riêng có khả năng ảnh hưởng hoặc chi phối việc thực hiện nhiệm vụ công.</p>
                 </div>
                 <div class="concept-file-card">
-                    <h4>👁️ Giám sát của nhân dân</h4>
+                    <h4><span class="material-symbols-rounded card-icon">monitoring</span> Giám sát của nhân dân</h4>
                     <p>Là cách quyền làm chủ của nhân dân được thực hiện trong thực tế, thông qua phản ánh, theo dõi, đánh giá và lên tiếng trước hoạt động công quyền.</p>
                 </div>
                 <div class="concept-file-card">
-                    <h4>🏛️ Thanh tra nhân dân</h4>
+                    <h4><span class="material-symbols-rounded card-icon">account_balance</span> Thanh tra nhân dân</h4>
                     <p>Là một kênh thể hiện vai trò giám sát ở cơ sở, góp phần phát hiện, phản ánh và phòng ngừa tiêu cực trong đời sống công.</p>
                 </div>
             </div>
@@ -497,7 +500,7 @@
 
         <!-- Block 4b — Tư liệu giáo trình -->
         <div class="z2-module" id="z2modTextbook">
-            <h3 class="z2-module-title">📖 Đọc từ giáo trình</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">auto_stories</span> Đọc từ giáo trình</h3>
             <p class="textbook-intro">Các trang giáo trình dưới đây là nguồn gốc chính cho nội dung Hồ sơ chương học và Chủ đề tranh luận. Click để phóng to.</p>
             <div class="textbook-grid">
                 <div class="textbook-thumb" onclick="openTextbook(this)">
@@ -529,7 +532,7 @@
 
         <!-- Block 5 — Timeline thể chế -->
         <div class="z2-module" id="z2mod5">
-            <h3 class="z2-module-title">📅 Một số mốc thể chế liên quan</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">timeline</span> Một số mốc thể chế liên quan</h3>
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-year">1946</div>
@@ -573,7 +576,7 @@
 
         <!-- Block 6 — Gallery liêm chính công -->
         <div class="z2-module" id="z2mod6">
-            <h3 class="z2-module-title">🖼️ Hình ảnh của một nền liêm chính công</h3>
+            <h3 class="z2-module-title"><span class="material-symbols-rounded sec-icon">photo_library</span> Hình ảnh của một nền liêm chính công</h3>
             <div class="gallery-grid">
                 <div class="gallery-card">
                     <img src="images/quochoi_vietnam_2018.jpg" alt="Tòa nhà Quốc hội Việt Nam nhìn từ phía trước" class="gallery-img">
@@ -623,7 +626,6 @@
                 </div>
                 <div class="topic-hero-visual">
                     <img src="images/book_nguyen_phu_trong_cover.jpg" alt="Bìa sách của Tổng Bí thư Nguyễn Phú Trọng" class="topic-hero-img">
-                    <img src="images/toa_dam_ban_noi_chinh_2024.jpg" alt="Tọa đàm Ban Nội chính Trung ương" class="topic-hero-img topic-hero-img-sm">
                 </div>
             </div>
         </div>
@@ -649,7 +651,6 @@
 
                 <!-- BLOCK A -->
                 <div class="topic-block" id="blockA">
-                    <div class="block-label">Block A</div>
                     <h3 class="block-heading">Có phải "một Đảng" là nguyên nhân sinh ra tham nhũng?</h3>
                     <div class="block-two-col">
                         <div class="block-text">
@@ -665,7 +666,6 @@
 
                 <!-- BLOCK B -->
                 <div class="topic-block" id="blockB">
-                    <div class="block-label">Block B</div>
                     <h3 class="block-heading">Vì sao nhận định này dễ thuyết phục?</h3>
                     <div class="reason-cards-grid">
                         <div class="reason-card">
@@ -686,34 +686,33 @@
 
                 <!-- BLOCK C -->
                 <div class="topic-block" id="blockC">
-                    <div class="block-label">Block C</div>
                     <h3 class="block-heading">Khung lý luận để phân tích</h3>
                     <p class="block-intro">Để trả lời đúng đề tài, cần đi từ khung lý luận về phòng, chống tham nhũng theo Tổng Bí thư Nguyễn Phú Trọng. Trên nền đó, mới có thể phân tích quyền lực, nguy cơ tham nhũng và ranh giới giữa lãnh đạo với buông lỏng.</p>
                     <div class="block-two-col">
                         <div class="pillars-grid">
                             <div class="pillar" data-pillar="1">
-                                <div class="pillar-icon">🔨</div>
+                                <div class="pillar-icon"><span class="material-symbols-rounded">construction</span></div>
                                 <h4>1. Gắn với xây dựng, chỉnh đốn Đảng</h4>
                                 <div class="pillar-detail">
                                     <p>Chống tham nhũng không được hiểu như hoạt động đứng ngoài hệ thống để phủ định hệ thống. Nó được đặt trong tổng thể xây dựng, chỉnh đốn Đảng và làm trong sạch bộ máy, giữ kỷ luật, kỷ cương và củng cố niềm tin của nhân dân.</p>
                                 </div>
                             </div>
                             <div class="pillar" data-pillar="2">
-                                <div class="pillar-icon">🔒</div>
+                                <div class="pillar-icon"><span class="material-symbols-rounded">lock</span></div>
                                 <h4>2. Kiểm soát quyền lực</h4>
                                 <div class="pillar-detail">
                                     <p>Quyền lực nếu không được kiểm soát rất dễ bị lạm dụng. Kiểm soát quyền lực chính là điểm bản lề nối giữa lý luận về Đảng cầm quyền, nhà nước pháp quyền và phòng ngừa tham nhũng.</p>
                                 </div>
                             </div>
                             <div class="pillar" data-pillar="3">
-                                <div class="pillar-icon">🚫</div>
+                                <div class="pillar-icon"><span class="material-symbols-rounded">block</span></div>
                                 <h4>3. Không có vùng cấm, không có ngoại lệ</h4>
                                 <div class="pillar-detail">
                                     <p>Xử lý sai phạm phải nghiêm minh và không thể chọn đối tượng theo cảm tính. Nguyên tắc này cho thấy chống tham nhũng là quá trình siết kỷ luật quyền lực, chứ không phải chấp nhận quyền lực tự miễn trừ cho chính mình.</p>
                                 </div>
                             </div>
                             <div class="pillar" data-pillar="4">
-                                <div class="pillar-icon">🌱</div>
+                                <div class="pillar-icon"><span class="material-symbols-rounded">eco</span></div>
                                 <h4>4. Chống suy thoái là chống cái gốc</h4>
                                 <div class="pillar-detail">
                                     <p>Tham nhũng không chỉ là hành vi vụ lợi về vật chất. Sâu hơn, nó gắn với suy thoái tư tưởng chính trị, đạo đức, lối sống trong một bộ phận cán bộ, đảng viên. Muốn chống tham nhũng bền vững phải chống từ gốc của sự tha hóa.</p>
@@ -722,11 +721,12 @@
                         </div>
                         <div class="block-visual block-visual-sm">
                             <img src="images/book_nguyen_phu_trong_cover.jpg" alt="Sách phòng chống tham nhũng — NXB CTQG" class="block-img">
+                            <img src="images/toa_dam_ban_noi_chinh_2024.jpg" alt="Tọa đàm Ban Nội chính Trung ương 2024" class="block-img" style="margin-top:12px;">
                             <img src="images/toa_dam_nxbctqg_2023.jpg" alt="Tọa đàm khoa học NXB CTQG 2023" class="block-img" style="margin-top:12px;">
                         </div>
                     </div>
                     <div class="expandable-note">
-                        <button class="expand-btn" id="expandBlockC">📖 Tổng hợp ý nghĩa 4 trụ cột</button>
+                        <button class="expand-btn" id="expandBlockC"><span class="material-symbols-rounded btn-icon">auto_stories</span> Tổng hợp ý nghĩa 4 trụ cột</button>
                         <div class="expand-body" id="expandBodyC">
                             <p>Từ 4 trụ này, có thể thấy: quan điểm về phòng, chống tham nhũng không xem tham nhũng là bản chất của Đảng, mà xem đó là nguy cơ phải được ngăn chặn bằng chỉnh đốn Đảng, kiểm soát quyền lực, kỷ luật nghiêm minh và chống suy thoái.</p>
                         </div>
@@ -735,7 +735,6 @@
 
                 <!-- BLOCK D -->
                 <div class="topic-block" id="blockD">
-                    <div class="block-label">Block D</div>
                     <h3 class="block-heading">Quyền lực và nguy cơ tham nhũng</h3>
                     <p class="block-intro">Tham nhũng có liên quan trực tiếp đến quyền lực, nhưng không thể nói một cách giản đơn rằng cứ có quyền lực là tất yếu có tham nhũng. Câu phải nói cho đúng là: quyền lực nếu không được kiểm soát thì rất dễ bị tha hóa và từ đó dẫn đến tham nhũng.</p>
                     <div class="dual-path">
@@ -769,38 +768,54 @@
 
                 <!-- BLOCK E -->
                 <div class="topic-block" id="blockE">
-                    <div class="block-label">Block E</div>
                     <h3 class="block-heading">Ranh giới giữa "Đảng lãnh đạo" và "Đảng buông lỏng"</h3>
                     <p class="block-intro">Nếu tham nhũng bắt nguồn từ quyền lực, vậy đâu là giới hạn để phân biệt giữa lãnh đạo và buông lỏng? Ranh giới ấy không nằm ở danh nghĩa lãnh đạo, mà nằm ở cách quyền lực được tổ chức, kiểm soát và chịu trách nhiệm.</p>
-                    <div class="block-two-col">
-                        <div class="compare-table-wrap" style="flex:1;">
-                            <table class="compare-table">
-                                <thead><tr>
-                                    <th class="compare-header-green">Đảng lãnh đạo</th>
-                                    <th class="compare-header-red">Đảng buông lỏng</th>
-                                </tr></thead>
-                                <tbody>
-                                    <tr><td>Quyền lực được đặt trong cơ chế kiểm soát</td><td>Quyền lực không được ràng buộc chặt chẽ</td></tr>
-                                    <tr><td>Có công khai, minh bạch</td><td>Thông tin khép kín, mờ ám</td></tr>
-                                    <tr><td>Có giải trình, giám sát</td><td>Giải trình hình thức, giám sát yếu</td></tr>
-                                    <tr><td>Sai phạm bị xử lý nghiêm minh</td><td>Nể nang, né tránh, dung túng sai phạm</td></tr>
-                                    <tr><td>Tổ chức có khả năng tự chỉnh đốn</td><td>Suy thoái không được ngăn chặn kịp thời</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="block-visual block-visual-sm">
-                            <img src="images/toa_dam_ban_noi_chinh_2024.jpg" alt="Tọa đàm Ban Nội chính TW" class="block-img">
-                        </div>
+                    <div class="compare-table-wrap">
+                        <table class="compare-table compare-table-full">
+                            <thead>
+                                <tr>
+                                    <th class="compare-header-label">Tiêu chí</th>
+                                    <th class="compare-header-green"><span class="material-symbols-rounded btn-icon">verified</span> Đảng lãnh đạo</th>
+                                    <th class="compare-header-red"><span class="material-symbols-rounded btn-icon">dangerous</span> Đảng buông lỏng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="compare-criteria">Quyền lực</td>
+                                    <td>Được đặt trong cơ chế kiểm soát</td>
+                                    <td>Không được ràng buộc chặt chẽ</td>
+                                </tr>
+                                <tr>
+                                    <td class="compare-criteria">Minh bạch</td>
+                                    <td>Có công khai, minh bạch</td>
+                                    <td>Thông tin khép kín, mờ ám</td>
+                                </tr>
+                                <tr>
+                                    <td class="compare-criteria">Giải trình & Giám sát</td>
+                                    <td>Có giải trình, giám sát thực chất</td>
+                                    <td>Giải trình hình thức, giám sát yếu</td>
+                                </tr>
+                                <tr>
+                                    <td class="compare-criteria">Xử lý sai phạm</td>
+                                    <td>Sai phạm bị xử lý nghiêm minh</td>
+                                    <td>Nể nang, né tránh, dung túng sai phạm</td>
+                                </tr>
+                                <tr>
+                                    <td class="compare-criteria">Khả năng tự chỉnh đốn</td>
+                                    <td>Tổ chức có khả năng tự làm trong sạch</td>
+                                    <td>Suy thoái không được ngăn chặn kịp thời</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <p class="block-note"><strong>"Lãnh đạo"</strong> là dùng quyền lực để tổ chức, dẫn dắt và chịu trách nhiệm trước nhân dân; <strong>"buông lỏng"</strong> là để quyền lực trượt khỏi khuôn khổ, bị tha hóa và tạo điều kiện cho tham nhũng nảy sinh.</p>
                 </div>
 
                 <!-- BLOCK F -->
                 <div class="topic-block topic-conclusion" id="blockF">
-                    <div class="block-label">Block F</div>
                     <h3 class="block-heading">Kết luận học thuật</h3>
                     <div class="conclusion-box">
-                        <div class="conclusion-icon">📜</div>
+                        <div class="conclusion-icon"><span class="material-symbols-rounded">article</span></div>
                         <p class="conclusion-text">Tham nhũng <strong>không phải</strong> là bản chất của Đảng.</p>
                         <p class="conclusion-detail">Đó là <strong>hiện tượng thoái hóa, biến chất</strong> của một bộ phận cán bộ, đảng viên khi quyền lực <strong>bị tha hóa và không được kiểm soát chặt chẽ</strong>.</p>
                         <p class="conclusion-detail">Vì vậy, đấu tranh phòng, chống tham nhũng không phải là phủ định chế độ, mà là để xây dựng, chỉnh đốn Đảng, làm trong sạch bộ máy, củng cố Nhà nước pháp quyền xã hội chủ nghĩa và bảo vệ niềm tin của nhân dân.</p>
@@ -810,7 +825,6 @@
 
                 <!-- BLOCK G -->
                 <div class="topic-block" id="blockG">
-                    <div class="block-label">Block G</div>
                     <h3 class="block-heading">Tài liệu tham khảo cho hồ sơ tranh luận</h3>
                     <div class="ref-list">
                         <a href="https://www.nxbctqg.org.vn/kien-quyet-kien-tri-dau-tranh-phong-chong-tham-nhung-tieu-cuc-gop-phan-xay-dung-dang-va-nha-nuoc-ta-ngay-cang-trong-sach-vung-manh.html" target="_blank" rel="noopener" class="ref-item">
@@ -834,7 +848,7 @@
                             <div><strong>Luật PCTN 2018</strong> — Bản phổ biến pháp luật (PDF) ↗</div>
                         </a>
                     </div>
-                    <h4 style="margin-top:30px; color:var(--primary);">📖 Giáo trình tham khảo</h4>
+                    <h4 style="margin-top:30px; color:var(--primary);"><span class="material-symbols-rounded card-icon">auto_stories</span> Giáo trình tham khảo</h4>
                     <p class="textbook-intro">Các trang giáo trình được dùng để đối chiếu nội dung về Nhà nước pháp quyền XHCN, phòng chống tham nhũng và trách nhiệm công dân.</p>
                     <div class="textbook-grid">
                         <div class="textbook-thumb" onclick="openTextbook(this)"><img src="images/textbook/giao_trinh_page_82.png" alt="Trang 82" loading="lazy"><span>Trang 82</span></div>
@@ -851,7 +865,7 @@
     <!-- ==================== ZONE 4 ==================== -->
     <section id="zone4" class="section">
         <div class="zone-header">
-            <span class="zone-badge">👤</span>
+            <span class="zone-badge"><span class="material-symbols-rounded">person_check</span></span>
             <h2>Công dân và tình huống</h2>
             <p class="zone-subtitle"><strong>Trách nhiệm công dân không phải một khẩu hiệu. Nó bắt đầu từ cách con người phản ứng trước những biểu hiện tiêu cực trong đời sống công.</strong></p>
             <p class="zone-desc">Trong phòng, chống tham nhũng, công dân không chỉ xuất hiện ở giai đoạn cuối cùng khi mọi việc đã trở nên nghiêm trọng. Trách nhiệm công dân bắt đầu từ việc nhận diện vấn đề, không thỏa hiệp với sai trái, biết sử dụng quyền phản ánh, kiến nghị, giám sát và lựa chọn hành động phù hợp với pháp luật.</p>
@@ -864,7 +878,7 @@
 
         <!-- Tình huống thực tế — Carousel -->
         <div class="z4-module" id="z4mod1">
-            <h3>🎭 Tình huống thực tế</h3>
+            <h3><span class="material-symbols-rounded sec-icon">theater_comedy</span> Tình huống thực tế</h3>
             <div class="scenario-carousel" id="scenarioCarousel">
                 <div class="scenario-progress-bar">
                     <div class="scenario-progress-fill" id="scenarioProgressFill"></div>
@@ -901,7 +915,7 @@
 
         <!-- Im lặng hay Hành động? -->
         <div class="z4-module" id="z4mod3">
-            <h3>📊 Im lặng hay Hành động?</h3>
+            <h3><span class="material-symbols-rounded sec-icon">analytics</span> Im lặng hay Hành động?</h3>
             <div class="spectrum-descriptions">
                 <div class="spectrum-desc-item"><strong>Né tránh:</strong> Tôi thấy có vấn đề nhưng chọn không quan tâm.</div>
                 <div class="spectrum-desc-item"><strong>Thỏa hiệp:</strong> Tôi biết là sai nhưng vẫn chấp nhận để việc của mình thuận lợi hơn.</div>
@@ -937,10 +951,10 @@
 
         <!-- Hồ sơ Công dân -->
         <div class="z4-module" id="z4modProfile">
-            <h3>📋 Hồ sơ Công dân của bạn</h3>
+            <h3><span class="material-symbols-rounded sec-icon">badge</span> Hồ sơ Công dân của bạn</h3>
             <div class="citizen-profile" id="citizenProfile">
                 <div class="profile-placeholder">
-                    <p>🔒 Hoàn thành tình huống thực tế và phân loại ở trên để xem hồ sơ công dân của bạn</p>
+                    <p><span class="material-symbols-rounded inline-icon">lock</span> Hoàn thành tình huống thực tế và phân loại ở trên để xem hồ sơ công dân của bạn</p>
                 </div>
             </div>
         </div>
@@ -954,14 +968,14 @@
     <!-- ==================== AI USAGE ==================== -->
     <section id="ai" class="section">
         <div class="zone-header">
-            <span class="zone-badge">📝</span>
+            <span class="zone-badge"><span class="material-symbols-rounded">source</span></span>
             <h2>AI & Nguồn tham khảo</h2>
             <p class="zone-desc">Phần này được đưa vào để bảo đảm minh bạch trong quá trình xây dựng sản phẩm, thể hiện trách nhiệm với nội dung học thuật và tuân thủ yêu cầu về liêm chính học thuật.</p>
         </div>
         <div class="ai-container">
             <!-- AI Usage -->
             <div class="accordion-group">
-                <h3>🤖 AI Usage</h3>
+                <h3><span class="material-symbols-rounded sec-icon">smart_toy</span> AI Usage</h3>
                 <div class="accordion">
                     <div class="accordion-item">
                         <button class="accordion-header">1. AI được dùng để làm gì?</button>
@@ -999,7 +1013,7 @@
             </div>
             <!-- Sources -->
             <div class="accordion-group">
-                <h3>📚 Nguồn tham khảo chính</h3>
+                <h3><span class="material-symbols-rounded sec-icon">library_books</span> Nguồn tham khảo chính</h3>
                 <div class="accordion">
                     <div class="accordion-item">
                         <button class="accordion-header">Giáo trình và tài liệu môn học</button>
@@ -1046,7 +1060,7 @@
     </footer>
 
     <!-- BACK TO TOP -->
-    <button class="back-to-top" id="backToTop" title="Lên đầu trang">↑</button>
+    <button class="back-to-top" id="backToTop" title="Lên đầu trang"><span class="material-symbols-rounded">keyboard_arrow_up</span></button>
 
     <!-- SCRIPTS -->
     <script src="js/utils.js"></script>

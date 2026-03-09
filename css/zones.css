@@ -2113,56 +2113,8 @@
 }
 
 /* ============================================
-   RESPONSIVE ADDITIONS
+   RESPONSIVE — see mobile.css for full mobile styles
    ============================================ */
-@media (max-width: 768px) {
-    .z3-sources {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .z3-source-card {
-        max-width: 100%;
-    }
-
-    .textbook-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-
-    .home-cards-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .concept-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .chain-flow {
-        flex-direction: column;
-    }
-
-    .chain-arrow {
-        transform: rotate(90deg);
-    }
-
-    .timeline-container {
-        padding-left: 30px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-cards-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ============================================
    DARK THEME OVERRIDES
@@ -3019,6 +2971,47 @@ body.dark-theme .compare-note {
     color: var(--text);
 }
 
+/* Full-width compare table */
+.compare-table-full {
+    width: 100%;
+}
+
+.compare-header-label {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    padding: 16px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-bottom: 2px solid var(--border);
+}
+
+body.dark-theme .compare-header-label {
+    background: var(--bg-card);
+    color: var(--text-muted);
+}
+
+.compare-criteria {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.88rem;
+    white-space: nowrap;
+    background: var(--primary-lighter);
+    border-right: 2px solid var(--border);
+}
+
+body.dark-theme .compare-criteria {
+    color: var(--primary);
+    background: var(--primary-lighter);
+}
+
+.compare-table-full thead th .material-symbols-rounded {
+    font-size: 1.1em;
+    vertical-align: -2px;
+}
+
 /* ============================================
    CLASSIFIER INTRO
    ============================================ */
@@ -3186,14 +3179,6 @@ body.dark-theme .topic-hero {
     padding-top: 20px;
 }
 
-.block-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    font-weight: 600;
-}
 
 .block-heading {
     font-family: var(--font-display);
@@ -3427,17 +3412,5 @@ body.dark-theme .ref-item {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .topic-sidebar { display: none; }
-    .topic-layout { padding: 20px 16px 40px; }
-}
-
-@media (max-width: 768px) {
-    .topic-hero-inner { flex-direction: column; }
-    .topic-hero-visual { width: 100%; flex-direction: row; }
-    .topic-hero-img { max-height: 200px; object-fit: cover; }
-    .block-two-col { flex-direction: column; }
-    .block-visual, .block-visual-sm { width: 100%; }
-    .reason-cards-grid { grid-template-columns: 1fr; }
-}
+/* Responsive handled in mobile.css */
 

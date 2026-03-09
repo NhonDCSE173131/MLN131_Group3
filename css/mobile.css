@@ -1,0 +1,905 @@
+/* ============================================
+   MOBILE RESPONSIVE — MLN131 Group 3
+   ============================================ */
+
+/* ===== GLOBAL MOBILE TYPOGRAPHY ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    p { margin-bottom: 14px; }
+
+    h1, .hero-title { font-size: 1.8rem !important; }
+    h2, .zone-header h2 { font-size: 1.5rem !important; }
+    h3, .block-heading { font-size: 1.2rem !important; }
+    h4 { font-size: 1rem !important; }
+
+    .section { padding-top: 60px; padding-bottom: 30px; }
+
+    /* Increase spacing between sections and cards */
+    .z1-module, .z2-module, .z4-module, .topic-block {
+        margin-bottom: 36px;
+    }
+}
+
+/* ===== 1. HEADER / NAVBAR ===== */
+@media (max-width: 768px) {
+    .navbar {
+        height: 52px;
+        padding: 0 12px;
+    }
+
+    .nav-brand { gap: 6px; }
+    .nav-logo .material-symbols-rounded { font-size: 1.2rem; }
+    .nav-title { font-size: 0.78rem; max-width: 140px; }
+
+    .hamburger { display: flex; }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 52px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--glass-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 4px;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-links.open { display: flex; }
+
+    .nav-link {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-link.active {
+        background: var(--primary);
+        color: white;
+    }
+
+    body.dark-theme .nav-link.active {
+        background: var(--primary-light);
+        color: #0f172a;
+    }
+
+    /* Hide sliding indicator on mobile */
+    .nav-indicator { display: none; }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .theme-icon.material-symbols-rounded { font-size: 1.1rem; }
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Hover zone smaller on mobile */
+    .nav-hover-zone { height: 12px; }
+}
+
+/* ===== 2. HERO — COMPACT ON MOBILE ===== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 30px 16px 24px;
+    }
+
+    .hero-content { max-width: 100%; }
+
+    .hero-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 0.92rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    /* Hide the long intro text on mobile */
+    .hero-intro-text { display: none; }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Hide diagram on mobile */
+    .hero-diagram { display: none; }
+
+    /* Hide hero-intro box on mobile */
+    .hero-intro { display: none; }
+}
+
+/* ===== HOME CARDS — 2x2 GRID ===== */
+@media (max-width: 768px) {
+    .home-cards-section { padding: 24px 16px; }
+
+    .home-cards-title {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .home-cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .home-card {
+        padding: 16px 12px;
+    }
+
+    .home-card-icon .material-symbols-rounded {
+        font-size: 1.8rem;
+    }
+
+    .home-card h4 { font-size: 0.85rem; }
+    .home-card p { font-size: 0.78rem; line-height: 1.5; }
+
+    .home-closing {
+        padding: 20px 16px;
+    }
+    .home-closing p { font-size: 0.88rem; }
+}
+
+/* ===== 3. ZONE 1 — ACCORDION-STYLE ON MOBILE ===== */
+@media (max-width: 768px) {
+    .zone-header {
+        padding: 24px 16px 16px;
+    }
+
+    .zone-badge {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .zone-badge .material-symbols-rounded { font-size: 1.5rem; }
+
+    .zone-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .zone-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    /* Zone 1 layout single column */
+    .zone1-layout {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .z1-left, .z1-right { max-width: 100%; }
+
+    /* Core map — vertical flow */
+    .core-map {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .core-node {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .core-arrow {
+        transform: rotate(90deg);
+        margin: 4px 0;
+    }
+
+    /* Z1 modules */
+    .z1-module {
+        padding: 16px;
+    }
+
+    .z1-module h3 { font-size: 1.1rem; }
+
+    /* Progress mini on mobile */
+    .z1-progress {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== 5. CHAIN FLOWS — VERTICAL STEP CARDS ===== */
+@media (max-width: 768px) {
+    .chain-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .chain-node {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+
+    .chain-arrow {
+        transform: rotate(90deg);
+        font-size: 1.2rem;
+        margin: 2px 0;
+    }
+
+    .chain-container { padding: 16px; }
+    .chain-title { font-size: 1rem; }
+    .chain-desc { font-size: 0.85rem; }
+}
+
+/* ===== 6. SIMULATION — PRESET-ONLY ON MOBILE ===== */
+@media (max-width: 768px) {
+    .sim-layout {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Hide individual sliders on mobile, show only presets */
+    .slider-group { display: none; }
+
+    .sim-presets {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .preset-btn {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 0.9rem;
+    }
+
+    .sim-results { gap: 10px; }
+
+    .result-meter {
+        margin-bottom: 8px;
+    }
+
+    .meter-label { font-size: 0.82rem; }
+
+    .info-btn { font-size: 0.85rem; padding: 10px 14px; }
+}
+
+/* ===== 7. COMPARE TABLE — STACKED CARDS ON MOBILE ===== */
+@media (max-width: 768px) {
+    .compare-table-wrap { overflow-x: visible; }
+
+    .compare-table {
+        display: block;
+    }
+
+    .compare-table thead { display: none; }
+
+    .compare-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .compare-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        background: var(--bg-card);
+        box-shadow: var(--shadow);
+    }
+
+    .compare-table tbody td {
+        display: block;
+        padding: 12px 16px;
+        border-bottom: none;
+        font-size: 0.88rem;
+    }
+
+    .compare-table tbody td:first-child {
+        border-right: none;
+        background: linear-gradient(135deg, #38a169, #48bb78);
+        color: white;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+
+    .compare-table tbody td:first-child::before {
+        content: '✅ Lãnh đạo: ';
+        font-weight: 700;
+    }
+
+    .compare-table tbody td:last-child {
+        background: rgba(229, 62, 62, 0.06);
+        border-top: 1px solid var(--border);
+    }
+
+    .compare-table tbody td:last-child::before {
+        content: '❌ Buông lỏng: ';
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+    /* 3-col table (Zone 3 Block E) */
+    .compare-table-full tbody td.compare-criteria {
+        background: var(--primary);
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .compare-table-full tbody td.compare-criteria::before { content: none; }
+
+    .compare-table-full tbody td:nth-child(2) {
+        background: linear-gradient(135deg, #38a169, #48bb78);
+        color: white;
+    }
+
+    .compare-table-full tbody td:nth-child(2)::before {
+        content: '✅ Lãnh đạo: ';
+        font-weight: 700;
+    }
+
+    .compare-table-full tbody td:nth-child(3) {
+        background: rgba(229, 62, 62, 0.06);
+    }
+
+    .compare-table-full tbody td:nth-child(3)::before {
+        content: '❌ Buông lỏng: ';
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+    body.dark-theme .compare-table tbody td:first-child {
+        background: linear-gradient(135deg, rgba(56,161,105,0.3), rgba(72,187,120,0.2));
+        color: var(--green);
+    }
+
+    body.dark-theme .compare-table tbody td:last-child {
+        background: rgba(229,62,62,0.08);
+    }
+}
+
+/* ===== 8. EVIDENCE WALL — HORIZONTAL SCROLL ===== */
+@media (max-width: 768px) {
+    .evidence-wall {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .evidence-card {
+        min-width: 200px;
+        max-width: 200px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .ev-icon .material-symbols-rounded { font-size: 1.5rem; }
+    .evidence-card h4 { font-size: 0.9rem; }
+    .ev-preview { font-size: 0.8rem; }
+}
+
+/* ===== 9. TEXTBOOK GRID — BETTER MOBILE ===== */
+@media (max-width: 768px) {
+    .textbook-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .textbook-thumb {
+        font-size: 0.78rem;
+    }
+
+    .textbook-thumb img {
+        max-height: 140px;
+        object-fit: cover;
+    }
+}
+
+/* ===== 10. TIMELINE — VERTICAL ON MOBILE ===== */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+        border-left: 3px solid var(--primary-light);
+        border-radius: 0;
+        margin-left: 12px;
+    }
+
+    .timeline-year {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--primary);
+        min-width: 44px;
+        flex-shrink: 0;
+    }
+
+    .timeline-title { font-size: 0.88rem; }
+    .timeline-desc { font-size: 0.82rem; }
+}
+
+/* ===== 11-13. ZONE 3 — TOPIC PAGE MOBILE ===== */
+@media (max-width: 768px) {
+    /* Hero compact */
+    .topic-hero { padding: 30px 16px 24px; }
+    .topic-hero-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .topic-hero-visual {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .topic-title { font-size: 1.6rem !important; }
+    .topic-subtitle { font-size: 0.88rem; }
+    .topic-breadcrumb { font-size: 0.72rem; }
+
+    .topic-chips {
+        justify-content: center;
+    }
+
+    .topic-chip { font-size: 0.72rem; padding: 4px 10px; }
+
+    /* Sidebar → horizontal scroll chips */
+    .topic-sidebar {
+        display: flex;
+        position: sticky;
+        top: 52px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 16px;
+        gap: 8px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        z-index: 50;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar-heading { display: none; }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+
+    .sidebar-link {
+        white-space: nowrap;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        border: 1px solid var(--border);
+        border-left: none;
+        background: var(--bg-card);
+    }
+
+    .sidebar-link.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        border-left: none;
+    }
+
+    .sidebar-link.active::before { display: none; }
+
+    body.dark-theme .sidebar-link.active {
+        background: var(--primary-light);
+        color: #0f172a;
+    }
+
+    /* Topic layout single column */
+    .topic-layout {
+        flex-direction: column;
+        padding: 0 16px 30px;
+        gap: 0;
+    }
+
+    .topic-content { width: 100%; }
+
+    /* Blocks */
+    .topic-block {
+        margin-bottom: 30px;
+        padding-top: 16px;
+    }
+
+    .block-heading { font-size: 1.15rem !important; }
+    .block-intro { font-size: 0.9rem; }
+
+    .block-two-col {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .block-visual, .block-visual-sm {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .block-text p { font-size: 0.88rem; }
+
+    .pull-quote {
+        font-size: 0.92rem;
+        padding: 12px 16px;
+    }
+
+    /* Reason cards — stack */
+    .reason-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .reason-card {
+        padding: 16px;
+    }
+    .reason-card h4 { font-size: 0.9rem; }
+    .reason-card p { font-size: 0.82rem; }
+
+    /* Pillars — stack vertical */
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .pillar { padding: 14px; }
+    .pillar h4 { font-size: 0.9rem; }
+    .pillar-detail p { font-size: 0.82rem; }
+
+    /* Dual path — vertical cards */
+    .dual-path {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .path {
+        padding: 16px;
+        border-radius: var(--radius-sm);
+    }
+
+    .path-negative {
+        background: rgba(229,62,62,0.06);
+        border: 1px solid rgba(229,62,62,0.2);
+    }
+
+    .path-positive {
+        background: rgba(56,161,105,0.06);
+        border: 1px solid rgba(56,161,105,0.2);
+    }
+
+    body.dark-theme .path-negative {
+        background: rgba(229,62,62,0.08);
+        border-color: rgba(252,129,129,0.2);
+    }
+
+    body.dark-theme .path-positive {
+        background: rgba(56,161,105,0.08);
+        border-color: rgba(104,211,145,0.2);
+    }
+
+    .path-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .pf-node {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pf-arrow {
+        transform: rotate(90deg);
+        margin: 2px 0;
+    }
+
+    .block-explain p { font-size: 0.88rem; }
+    .block-note { font-size: 0.85rem; padding: 12px 14px; }
+    .block-final-quote { font-size: 0.95rem; }
+
+    /* Expandable note */
+    .expand-btn { font-size: 0.85rem; padding: 10px 16px; }
+    .expand-body p { font-size: 0.88rem; }
+
+    /* References */
+    .ref-item { padding: 12px 14px; font-size: 0.82rem; }
+    .ref-num { width: 24px; height: 24px; min-width: 24px; font-size: 0.72rem; }
+}
+
+/* ===== 14. ZONE 3 — DUAL PATH CARDS (already covered above) ===== */
+
+/* ===== 16. ZONE 4 — TAP INSTEAD OF DRAG ON MOBILE ===== */
+@media (max-width: 768px) {
+    /* Scenario carousel compact */
+    .scenario-carousel {
+        padding: 20px 16px;
+    }
+
+    .scenario-title { font-size: 1rem; }
+    .scenario-desc { font-size: 0.88rem; }
+
+    .scenario-option {
+        font-size: 0.85rem;
+        padding: 12px 14px;
+    }
+
+    /* Classifier — tap mode */
+    .classifier-columns {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .classifier-col {
+        min-height: 120px;
+    }
+
+    .classify-item {
+        cursor: pointer;
+        font-size: 0.85rem;
+    }
+
+    .classifier-intro { font-size: 0.85rem; }
+
+    /* Spectrum — vertical ladder */
+    .spectrum-container {
+        overflow-x: visible;
+    }
+
+    .spectrum-axis {
+        flex-direction: column;
+        gap: 0;
+        overflow-x: visible;
+    }
+
+    .spectrum-label {
+        text-align: left;
+        padding: 4px 8px;
+        font-size: 0.78rem;
+    }
+
+    .spectrum-dropzones {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .spectrum-zone {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .spectrum-items {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .spectrum-item {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
+    .spectrum-descriptions {
+        gap: 8px;
+    }
+
+    .spectrum-desc-item {
+        font-size: 0.82rem;
+        padding: 10px 12px;
+    }
+
+    /* Profile compact */
+    .citizen-profile {
+        padding: 16px;
+    }
+
+    .profile-placeholder p { font-size: 0.85rem; }
+}
+
+/* ===== 17. SPECTRUM VERTICAL LADDER — DETAILED ===== */
+@media (max-width: 768px) {
+    .spectrum-note {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+}
+
+/* ===== 19. AI & SOURCES — COMPACT ===== */
+@media (max-width: 768px) {
+    .ai-container {
+        padding: 0 16px 40px;
+    }
+
+    .accordion-group h3 { font-size: 1.1rem; }
+
+    .accordion-header {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-body p,
+    .accordion-body li {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== CONCEPT GRID — 1 COLUMN ON MOBILE ===== */
+@media (max-width: 768px) {
+    .concept-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .concept-file-card {
+        padding: 14px;
+    }
+
+    .concept-file-card h4 { font-size: 0.9rem; }
+    .concept-file-card p { font-size: 0.82rem; }
+}
+
+/* ===== Z2 MODULE TITLES ===== */
+@media (max-width: 768px) {
+    .z2-module {
+        padding: 0 16px;
+    }
+
+    .z2-module-title {
+        font-size: 1.1rem;
+    }
+
+    .z2-module-title .sec-icon {
+        font-size: 1.1em;
+    }
+}
+
+/* ===== ZONE CLOSING ===== */
+@media (max-width: 768px) {
+    .zone-closing {
+        padding: 20px 16px;
+        margin: 20px 16px 0;
+    }
+
+    .zone-closing p { font-size: 0.88rem; }
+}
+
+/* ===== Z4 HERO IMAGE ===== */
+@media (max-width: 768px) {
+    .z4-hero-image {
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .z4-banner-img {
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    .z4-banner-caption { font-size: 0.78rem; }
+}
+
+/* ===== GALLERY ===== */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .gallery-card img { max-height: 180px; }
+}
+
+/* ===== BACK TO TOP ===== */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-to-top .material-symbols-rounded { font-size: 1.2rem; }
+}
+
+/* ===== FOOTER ===== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 16px;
+        font-size: 0.82rem;
+    }
+}
+
+/* ===== EXTRA SMALL (< 380px) ===== */
+@media (max-width: 380px) {
+    .home-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title { font-size: 1.5rem !important; }
+
+    .topic-title { font-size: 1.3rem !important; }
+
+    .nav-title { display: none; }
+}
+
+/* ===== CONCLUSION BOX MOBILE ===== */
+@media (max-width: 768px) {
+    .conclusion-box {
+        padding: 20px 16px;
+    }
+
+    .conclusion-icon .material-symbols-rounded { font-size: 2.2rem; }
+    .conclusion-text { font-size: 1rem; }
+    .conclusion-detail { font-size: 0.88rem; }
+}
+
+/* ===== Z3 SOURCES ===== */
+@media (max-width: 768px) {
+    .z3-sources {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+    }
+}
+
+/* ===== SIM STATUS ===== */
+@media (max-width: 768px) {
+    .sim-status {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+}
+
+/* ===== COMPARE NOTE ===== */
+@media (max-width: 768px) {
+    .compare-note {
+        font-size: 0.82rem;
+        padding: 10px 14px;
+    }
+}
+

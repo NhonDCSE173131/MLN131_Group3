@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (expandBtn && expandBody) {
         expandBtn.addEventListener('click', () => {
             expandBody.classList.toggle('show');
-            expandBtn.textContent = expandBody.classList.contains('show')
-                ? '📖 Ẩn tổng hợp'
-                : '📖 Tổng hợp ý nghĩa 4 trụ cột';
+            expandBtn.innerHTML = expandBody.classList.contains('show')
+                ? '<span class="material-symbols-rounded btn-icon">auto_stories</span> Ẩn tổng hợp'
+                : '<span class="material-symbols-rounded btn-icon">auto_stories</span> Tổng hợp ý nghĩa 4 trụ cột';
         });
     }
 });
