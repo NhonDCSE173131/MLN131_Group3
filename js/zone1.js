@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- KNOWLEDGE MAP NODES ---
     const moduleMap = {
         'kmNode1': 'module1',
-        'kmNode2': 'module3',
-        'kmNode3': 'module4',
-        'kmNode4': 'module5'
+        'kmNode2': 'module2',
+        'kmNode3': 'module3',
+        'kmNode4': 'module4',
+        'kmNode5': 'module5'
     };
 
     document.querySelectorAll('.km-node').forEach(node => {

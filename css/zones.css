@@ -150,19 +150,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
 .km-node {
-    padding: 16px 20px;
+    padding: 14px 16px;
     background: linear-gradient(135deg, var(--primary-lighter), white);
     border: 2px solid var(--primary-light);
     border-radius: var(--radius);
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
-    min-width: 140px;
+    min-width: 120px;
+    max-width: 160px;
+    flex: 1 1 120px;
 }
 
 .km-node:hover {
@@ -188,9 +190,10 @@
 }
 
 .km-arrow {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-light);
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 /* Module Panels */
