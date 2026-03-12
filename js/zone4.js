@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset AppState
         AppState.scenarioResults = [];
         AppState.classifierScore = undefined;
-        AppState.spectrumScore = 0;
+        AppState.spectrumScore = undefined;
         currentScenario = 0;
         classifierDropCount = 0;
         spectrumDropCount = 0;

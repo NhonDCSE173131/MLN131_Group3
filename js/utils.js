@@ -139,7 +139,7 @@ const AppState = {
     currentSection: 'home',
     zone1Explored: new Set(),
     scenarioResults: [],
-    spectrumScore: 0,
+    spectrumScore: undefined,
     classifierScore: undefined,
     spectrumPlaced: 0,
     classifierPlaced: 0,

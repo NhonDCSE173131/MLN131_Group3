@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- KNOWLEDGE MAP NODES ---
     const moduleMap = {
         'kmNode1': 'module1',
-        'kmNode2': 'module2',
-        'kmNode3': 'module3',
-        'kmNode4': 'module4'
+        'kmNode2': 'module3',
+        'kmNode3': 'module4',
+        'kmNode4': 'module5'
     };
 
     document.querySelectorAll('.km-node').forEach(node => {
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = AppState.zone1Explored.size;
         const fill = document.getElementById('z1ProgressFill');
         const text = document.getElementById('z1ProgressText');
-        if (fill) fill.style.width = (count / 4 * 100) + '%';
-        if (text) text.textContent = count + '/4 nội dung đã khám phá';
+        if (fill) fill.style.width = (count / 5 * 100) + '%';
+        if (text) text.textContent = count + '/5 nội dung đã khám phá';
     }
 
     // --- RELATION TAGS ---
