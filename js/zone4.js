@@ -7,84 +7,82 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // SCENARIO CAROUSEL
     // ==========================================
-    const scenarios = [
+    const baseScenarios = [
         {
-            id: 1, title: 'Tình huống 1: "Bồi dưỡng" để hồ sơ nhanh hơn',
-            desc: 'Bạn đi làm thủ tục hành chính. Cán bộ gợi ý: "Em bồi dưỡng chút thì hồ sơ nhanh hơn". Bạn sẽ làm gì?',
+            id: 1,
+            title: 'Câu 1: Đại án Vạn Thịnh Phát và SCB',
+            desc: 'Bà Trương Mỹ Lan đã lôi kéo, mua chuộc hàng loạt cán bộ thanh tra, giám sát ngân hàng (điển hình là Đỗ Thị Nhàn nhận hối lộ 5,2 triệu USD) để che giấu sai phạm. Vụ án này cho thấy khi quyền lực của cơ quan thanh tra bị “mua chuộc” và thiếu sự giám sát chéo, đó là biểu hiện của điều gì?',
+            correctOption: 'B',
             options: [
-                { text: '💰 Đưa tiền để xong nhanh', type: 'avoid', label: 'Thỏa hiệp' },
-                { text: '🤷 Im lặng bỏ đi', type: 'passive', label: 'Né tránh' },
-                { text: '📝 Từ chối, phản ánh đường dây nóng', type: 'active', label: 'Hành động pháp lý' }
-            ],
-            correctType: 'active',
-            feedback: {
-                avoid: 'Đưa tiền = dung dưỡng <strong>hối lộ</strong>. Bạn có quyền từ chối.',
-                passive: 'Im lặng giúp sai phạm tiếp diễn. Công dân có quyền <strong>phản ánh, tố cáo</strong>.',
-                active: 'Phản ứng phù hợp nhất. Bạn bảo vệ quyền lợi bản thân và thực hiện <strong>trách nhiệm công dân</strong>.'
-            }
+                { key: 'A', text: 'A. Đảng đang lãnh đạo tuyệt đối.', profileType: 'avoid', label: 'Hiểu sai bản chất', feedback: 'Không đúng. Đây không phải biểu hiện của lãnh đạo đúng đắn, mà là sự <strong>tha hóa quyền lực</strong> trong khâu thanh tra, giám sát.' },
+                { key: 'B', text: 'B. Sự buông lỏng quản lý và lỗ hổng trong cơ chế kiểm soát quyền lực.', profileType: 'active', label: 'Nhận diện đúng cơ chế', feedback: 'Chính xác. Vụ án cho thấy khi cơ quan có chức năng kiểm soát lại bị mua chuộc, đó là dấu hiệu của <strong>buông lỏng quản lý và lỗ hổng trong kiểm soát quyền lực</strong>.' },
+                { key: 'C', text: 'C. Sự phối hợp nhịp nhàng giữa doanh nghiệp và nhà nước.', profileType: 'avoid', label: 'Ngụy biện nguy hiểm', feedback: 'Sai. Đây không phải phối hợp hợp pháp mà là <strong>cấu kết, mua chuộc và che giấu sai phạm</strong>.' },
+                { key: 'D', text: 'D. Tính ưu việt của hệ thống ngân hàng tư nhân.', profileType: 'avoid', label: 'Đánh tráo vấn đề', feedback: 'Sai trọng tâm. Vấn đề nằm ở <strong>kiểm soát quyền lực bị vô hiệu hóa</strong>, không phải ở việc ca ngợi mô hình ngân hàng tư nhân.' }
+            ]
         },
         {
-            id: 2, title: 'Tình huống 2: Xung đột lợi ích',
-            desc: 'Một cán bộ can thiệp phân bổ dự án để ưu ái công ty của người thân. Bạn sẽ làm gì?',
+            id: 2,
+            title: 'Câu 2: Vụ Việt Á',
+            desc: 'Trong vụ Việt Á, Tổng Giám đốc Phan Quốc Việt đã cấu kết với nhiều cán bộ tại Bộ Y tế và Bộ KH&CN để thổi giá kit xét nghiệm, sau đó chi “hoa hồng” hàng trăm tỷ đồng. Việc xử lý cả Bộ trưởng và các lãnh đạo cấp cao trong vụ án này khẳng định quyết tâm nào của Đảng?',
+            correctOption: 'B',
             options: [
-                { text: '🙈 Không liên quan đến mình', type: 'avoid', label: 'Né tránh' },
-                { text: '🗣️ Khuyên riêng họ dừng', type: 'passive', label: 'Nhận diện nhưng chưa đủ' },
-                { text: '📋 Phản ánh cơ quan kiểm tra', type: 'active', label: 'Giám sát pháp lý' }
-            ],
-            correctType: 'active',
-            feedback: {
-                avoid: '<strong>Xung đột lợi ích</strong> — thờ ơ là môi trường cho tham nhũng.',
-                passive: 'Nhận diện đúng, nhưng giải quyết riêng tư không ngăn hành vi hệ thống.',
-                active: 'Phản ánh kênh chính thức = thực hiện quyền <strong>giám sát</strong> công dân.'
-            }
+                { key: 'A', text: 'A. Chỉ xử lý những người trực tiếp đưa tiền, không xử lý người nhận.', profileType: 'avoid', label: 'Bao che một phần', feedback: 'Sai. Phòng, chống tham nhũng không thể chỉ xử lý một phía mà phải xử lý <strong>cả người đưa, người nhận và người lợi dụng quyền lực</strong>.' },
+                { key: 'B', text: 'B. Kiên quyết đấu tranh phòng, chống tham nhũng “không có vùng cấm, không có ngoại lệ”.', profileType: 'active', label: 'Hiểu đúng quan điểm PCTN', feedback: 'Đúng. Việc xử lý cán bộ cấp cao cho thấy quyết tâm <strong>“không có vùng cấm, không có ngoại lệ”</strong> trong đấu tranh PCTN.' },
+                { key: 'C', text: 'C. Ưu tiên bảo vệ uy tín của ngành Y tế nên sẽ xử lý nội bộ.', profileType: 'passive', label: 'Né xử lý công khai', feedback: 'Sai. Nếu chỉ xử lý nội bộ thì không thể bảo đảm <strong>tính nghiêm minh của pháp luật</strong> và niềm tin của nhân dân.' },
+                { key: 'D', text: 'D. Tham nhũng trong đại dịch là lỗi của cơ chế, không phải do cá nhân.', profileType: 'avoid', label: 'Phủ nhận trách nhiệm cá nhân', feedback: 'Không đúng. Cơ chế có thể có kẽ hở, nhưng hành vi tham nhũng vẫn gắn với <strong>trách nhiệm cá nhân cụ thể</strong>.' }
+            ]
         },
         {
-            id: 3, title: 'Tình huống 3: Quà tặng công vụ dịp lễ',
-            desc: 'Dịp Tết, cơ quan nhận nhiều quà biếu từ đối tác, doanh nghiệp. Bạn sẽ làm gì?',
+            id: 3,
+            title: 'Câu 3: Dự án “đất vàng” và Tập đoàn Phúc Sơn',
+            desc: 'Lãnh đạo một số tỉnh đã nhận những khoản tiền lớn từ Tập đoàn Phúc Sơn để giao các dự án “đất vàng” không qua đấu giá, gây thất thoát tài sản nhà nước. Theo lý luận của Tổng Bí thư Nguyễn Phú Trọng, để ngăn chặn tình trạng này, giải pháp then chốt là gì?',
+            correctOption: 'C',
             options: [
-                { text: '🎁 Bình thường, ai cũng vậy', type: 'avoid', label: 'Thỏa hiệp' },
-                { text: '🤔 Khó chịu nhưng không nói', type: 'passive', label: 'Im lặng' },
-                { text: '📢 Đề xuất công khai quà tặng', type: 'active', label: 'Đề xuất minh bạch' }
-            ],
-            correctType: 'active',
-            feedback: {
-                avoid: 'Quà biếu vượt quy định = <strong>hối lộ trá hình</strong>.',
-                passive: 'Quà vượt mức phải <strong>kê khai và nộp lại</strong>.',
-                active: 'Đề xuất công khai = <strong>xây dựng văn hóa minh bạch</strong>.'
-            }
+                { key: 'A', text: 'A. Cấm các doanh nghiệp tư nhân tham gia dự án nhà nước.', profileType: 'avoid', label: 'Giải pháp cực đoan', feedback: 'Sai. Vấn đề không nằm ở việc có doanh nghiệp tư nhân tham gia hay không, mà ở chỗ <strong>quyền lực và quy trình phân bổ dự án phải được kiểm soát</strong>.' },
+                { key: 'B', text: 'B. Xóa bỏ chế độ một đảng lãnh đạo.', profileType: 'avoid', label: 'Lệch khung lý luận', feedback: 'Sai. Câu hỏi đang xét theo khung lý luận về <strong>kiểm soát quyền lực</strong>, không phải thay đổi mô hình chính trị bằng một kết luận giản lược.' },
+                { key: 'C', text: 'C. “Nhốt quyền lực vào trong lồng quy chế” bằng các quy định pháp luật chặt chẽ.', profileType: 'active', label: 'Nắm đúng giải pháp then chốt', feedback: 'Chính xác. Muốn ngăn ngừa lợi dụng dự án công để trục lợi, phải <strong>nhốt quyền lực vào lồng cơ chế</strong> bằng pháp luật, đấu giá minh bạch và giám sát chặt chẽ.' },
+                { key: 'D', text: 'D. Tăng lương cho cán bộ cao gấp 10 lần hiện tại.', profileType: 'passive', label: 'Giải pháp phiến diện', feedback: 'Sai. Tăng thu nhập có thể hỗ trợ, nhưng không thể thay thế cho <strong>thiết chế kiểm soát quyền lực</strong>.' }
+            ]
         },
         {
-            id: 4, title: 'Tình huống 4: Tài sản tăng bất thường',
-            desc: 'Cán bộ trong cơ quan có tài sản tăng bất thường, thu nhập không tương xứng. Bạn sẽ làm gì?',
+            id: 4,
+            title: 'Câu 4: Sai phạm đấu thầu của AIC',
+            desc: 'Nhiều sai phạm trong đấu thầu của Công ty AIC tại các bệnh viện chỉ bị phanh phui sau khi có đơn thư phản ánh và sự vào cuộc quyết liệt của báo chí, quần chúng nhân dân. Điều này thể hiện trách nhiệm nào của công dân trong phòng, chống tham nhũng?',
+            correctOption: 'B',
             options: [
-                { text: '🏠 Chắc họ kinh doanh riêng', type: 'avoid', label: 'Biện minh' },
-                { text: '💬 Bàn tán với đồng nghiệp', type: 'passive', label: 'Phản ánh không chính thức' },
-                { text: '📝 Kiến nghị xác minh tài sản', type: 'active', label: 'Hành động pháp lý' }
-            ],
-            correctType: 'active',
-            feedback: {
-                avoid: 'Biện minh hộ = vô tình bảo vệ sai phạm.',
-                passive: 'Bàn tán không giải quyết vấn đề. Hãy dùng <strong>kênh chính thức</strong>.',
-                active: 'Luật PCTN quy định <strong>kê khai, xác minh tài sản</strong>. Kiến nghị = quyền công dân.'
-            }
+                { key: 'A', text: 'A. Công dân chỉ nên đứng ngoài cuộc vì đây là việc của Nhà nước.', profileType: 'avoid', label: 'Thụ động', feedback: 'Sai. Công dân không đứng ngoài mà có quyền và trách nhiệm <strong>giám sát, phản ánh và tố giác</strong> sai phạm.' },
+                { key: 'B', text: 'B. Công dân thực hiện quyền giám sát, phát hiện và tố giác hành vi tham nhũng.', profileType: 'active', label: 'Thực hiện đúng trách nhiệm công dân', feedback: 'Đúng. Đây là biểu hiện rõ của trách nhiệm công dân trong <strong>giám sát quyền lực và phát hiện tham nhũng</strong>.' },
+                { key: 'C', text: 'C. Công dân có quyền tự ý bắt giữ cán bộ khi nghi ngờ tham nhũng.', profileType: 'passive', label: 'Có phản ứng nhưng sai pháp lý', feedback: 'Sai. Chống tham nhũng phải đi kèm <strong>hành động đúng pháp luật</strong>, không phải tự ý áp dụng biện pháp trái thẩm quyền.' },
+                { key: 'D', text: 'D. Công dân chỉ có trách nhiệm đóng thuế, không cần quan tâm đến PCTN.', profileType: 'avoid', label: 'Thu hẹp vai trò công dân', feedback: 'Sai. Công dân còn có vai trò <strong>giám sát, phản biện và lên tiếng</strong> trước các biểu hiện tiêu cực.' }
+            ]
         },
         {
-            id: 5, title: 'Tình huống 5: Sợ bị trù dập khi tố cáo',
-            desc: 'Bạn có bằng chứng tham nhũng của cấp trên nhưng lo sợ bị trù dập. Bạn sẽ làm gì?',
+            id: 5,
+            title: 'Câu 5: Lợi ích phi vật chất qua người thân',
+            desc: 'Một cán bộ lãnh đạo không nhận tiền mặt, không nhận nhà đất, nhưng lại để doanh nghiệp chi trả toàn bộ chi phí cho con cái đi du học nước ngoài hoặc sắp xếp cho người thân vào các vị trí “ngồi mát ăn bát vàng”. Đây có được coi là hành vi tham nhũng không?',
+            correctOption: 'B',
             options: [
-                { text: '😶 Im lặng vì sợ', type: 'avoid', label: 'Né tránh' },
-                { text: '🕵️ Tìm hiểu cơ chế bảo vệ trước', type: 'passive', label: 'Chuẩn bị' },
-                { text: '📋 Tố cáo kèm bằng chứng, yêu cầu bảo vệ', type: 'active', label: 'Hành động pháp lý' }
-            ],
-            correctType: 'active',
-            feedback: {
-                avoid: 'Im lặng cho phép tham nhũng tiếp diễn. Pháp luật có <strong>cơ chế bảo vệ người tố cáo</strong>.',
-                passive: 'Bước đi khôn ngoan! Tìm hiểu <strong>Luật Tố cáo 2018</strong> trước khi hành động.',
-                active: 'Phản ứng <strong>dũng cảm và đúng pháp lý</strong>. Điều 47 Luật Tố cáo 2018 bảo vệ người tố cáo.'
-            }
+                { key: 'A', text: 'A. Không, vì không có giao dịch tiền mặt trực tiếp cho cán bộ.', profileType: 'avoid', label: 'Hiểu quá hẹp về tham nhũng', feedback: 'Sai. Tham nhũng không chỉ tồn tại dưới dạng tiền mặt trực tiếp, mà còn có thể thông qua <strong>lợi ích gián tiếp</strong>.' },
+                { key: 'B', text: 'B. Có, đây là hình thức tham nhũng lợi ích phi vật chất hoặc thông qua người thân.', profileType: 'active', label: 'Nhận diện đúng bản chất', feedback: 'Chính xác. Đây là dạng <strong>trục lợi thông qua người thân hoặc lợi ích phi vật chất</strong>, vẫn thuộc bản chất của hành vi tham nhũng.' },
+                { key: 'C', text: 'C. Chỉ là quan hệ giúp đỡ cá nhân thông thường.', profileType: 'avoid', label: 'Bình thường hóa sai phạm', feedback: 'Sai. Khi lợi ích gắn với chức vụ, quyền lực và đổi lấy ưu ái, đó không còn là giúp đỡ cá nhân thông thường.' },
+                { key: 'D', text: 'D. Không vi phạm vì pháp luật chỉ xử lý khi thu được tiền mặt.', profileType: 'avoid', label: 'Sai căn cứ pháp lý', feedback: 'Sai. Pháp luật không giới hạn tham nhũng ở tiền mặt; nhiều hành vi <strong>nhận lợi ích khác, qua trung gian hoặc người thân</strong> vẫn bị xử lý.' }
+            ]
         }
     ];
 
+    function buildScenarioSet() {
+        return shuffleArray(baseScenarios).map(scenario => ({
+            ...scenario,
+            options: shuffleArray(scenario.options).map(option => ({ ...option }))
+        }));
+    }
+
+    function getScenarioDisplayTitle(scenario, idx) {
+        const cleanTitle = scenario.title.replace(/^Câu\s+\d+:\s*/i, '');
+        return `Câu ${idx + 1}: ${cleanTitle}`;
+    }
+
+    let scenarios = buildScenarioSet();
     let currentScenario = 0;
     const slideArea = document.getElementById('scenarioSlideArea');
     const counterEl = document.getElementById('scenarioCounter');
@@ -94,12 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!slideArea) return;
         const s = scenarios[idx];
         const optionsHTML = s.options.map((opt, i) =>
-            `<button class="scenario-option" data-type="${opt.type}" data-idx="${i}">${opt.text}</button>`
+            `<button class="scenario-option" data-key="${opt.key}" data-type="${opt.profileType}" data-idx="${i}">${opt.text}</button>`
         ).join('');
 
         slideArea.innerHTML = `
             <div class="scenario-slide" id="scenarioSlide">
-                <div class="scenario-title">${s.title}</div>
+                <div class="scenario-title">${getScenarioDisplayTitle(s, idx)}</div>
                 <div class="scenario-desc">${s.desc}</div>
                 <div class="scenario-options">${optionsHTML}</div>
                 <div class="scenario-feedback" id="scenarioFeedback"></div>
@@ -148,13 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.classList.add('answered');
 
         const type = btn.dataset.type;
-        const opt = scenario.options[btn.dataset.idx];
-        const isCorrect = type === scenario.correctType;
+        const opt = scenario.options[Number(btn.dataset.idx)];
+        const isCorrect = opt.key === scenario.correctOption;
 
         // Mark options
         slide.querySelectorAll('.scenario-option').forEach(b => {
             b.disabled = true;
-            if (b.dataset.type === scenario.correctType) b.classList.add('option-correct');
+            if (b.dataset.key === scenario.correctOption) b.classList.add('option-correct');
             else if (b === btn && !isCorrect) b.classList.add('option-wrong');
         });
 
@@ -163,9 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (fbEl) {
             fbEl.innerHTML = `
                 <div class="feedback-verdict ${isCorrect ? 'verdict-correct' : 'verdict-wrong'}">
-                    ${isCorrect ? '✅ Đúng!' : '❌ Chưa phải lựa chọn tốt nhất'}
+                    ${isCorrect ? '✅ Đúng!' : `❌ Chưa chính xác — đáp án đúng là ${scenario.correctOption}`}
                 </div>
-                <p><strong>📌 Phân tích:</strong> ${scenario.feedback[type]}</p>
+                <p><strong>📌 Phân tích:</strong> ${opt.feedback}</p>
                 <p class="feedback-label"><strong>🏷️ Thái độ:</strong> ${opt.label}</p>
             `;
             fbEl.classList.add('show');
@@ -424,6 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScenario = 0;
         classifierDropCount = 0;
         spectrumDropCount = 0;
+        scenarios = buildScenarioSet();
 
         // ---- Reset Game 1: Scenario carousel ----
         if (counterEl) counterEl.textContent = `Câu 1 / ${scenarios.length}`;
